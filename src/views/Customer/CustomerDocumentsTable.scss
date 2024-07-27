@@ -1,0 +1,33 @@
+.Customer-Documents-Table{
+    .p-datatable-wrapper{
+        max-height:var( --dynamic-value);
+        table{
+            border-collapse: separate;
+            thead{
+                th{
+                    position: sticky;
+                    top: 0;
+                    z-index: 2;
+                }
+            }
+        }
+       
+    }
+}
+
+.monitor-risks-screen-margin{
+    margin-bottom: 0 !important;
+}
+
+.add-QBR-btn{
+    display: flex;
+    justify-content: flex-end;
+}
+.customer-document-screen-margin{
+    margin-bottom: 0 !important;
+    .Customer-Documents-Table{
+        .p-datatable.p-component.p-datatable-selectable{
+            margin-left: 0 !important;
+        }
+    }
+}

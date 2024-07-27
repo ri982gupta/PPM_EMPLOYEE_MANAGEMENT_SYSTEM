@@ -1,0 +1,53 @@
+@import "../../scss/variables";
+
+.shiftAllowanceTable {
+  tr:has(.disabledRow) td:nth-of-type(1) .p-checkbox.p-component {
+    cursor: not-allowed;
+  }
+  .shiftAllowanceExpandIcon .darkHeader thead tr th div .MuiIconButton-root {
+    color: white;
+    width: 35px;
+    margin-top: -2px;
+  }
+  table {
+    tr {
+      th,
+      td {
+        &:nth-of-type(1) {
+          max-width: 50px;
+          min-width: 50px;
+        }
+        &:nth-of-type(2) {
+          max-width: 90px;
+          min-width: 90px;
+          text-align: center;
+        }
+        &:nth-of-type(3),
+        &:nth-of-type(4),
+        &:nth-of-type(5) {
+          max-width: 150px;
+          min-width: 150px;
+        }
+
+        &:nth-of-type(n + 6) {
+          max-width: 90px;
+          min-width: 90px;
+        }
+      }
+    }
+  }
+  .p-hidden-accessible .p-dropdown-hidden-select {
+    padding: 0;
+  }
+  .p-dropdown {
+    width: 50px;
+    justify-content: space-between;
+    padding: 0 5px;
+  }
+  .p-dropdown-label.p-inputtext {
+    padding: 0;
+  }
+  .p-dropdown-trigger {
+    width: fit-content !important;
+  }
+}

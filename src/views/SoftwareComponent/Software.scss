@@ -1,0 +1,166 @@
+.rmsc .dropdown-heading {
+  height: auto;
+}
+.nameSty {
+  width: 175px !important;
+}
+
+.targetTablePrnt {
+  max-height: 500px;
+}
+
+.targetTablePrnt input {
+  width: 100px !important;
+}
+td.target {
+  background-color: #75f2f2 !important;
+}
+.targetTable td {
+  min-width: 87px !important;
+}
+.targetTable .total {
+  background-color: #ffffe6 !important;
+}
+.targetTable .odd {
+  background-color: #75f2f2 !important;
+}
+.targetTable .even {
+  background-color: #facbcb !important;
+}
+
+.targetTable .innereven {
+  background-color: #f5e5e5 !important;
+}
+.targetTable .innerodd {
+  background-color: #d8eaea !important;
+  text-align: right;
+}
+.targetTable tr:nth-of-type(4n + 7) {
+  background-color: #d4e7fb !important;
+  text-align: left;
+}
+.targetTable tr:nth-of-type(3) {
+  background-color: #d4e7fb !important;
+  text-align: left;
+}
+td.ellipsis.oddd.summaryTraget {
+  padding-left: 54px !important;
+}
+
+.targetTable .odd,
+.even,
+.innereven,
+.innereven,
+.total {
+  text-align: right !important;
+}
+.targetTable table {
+  width: 100%;
+  overflow-x: auto;
+
+  max-width: fit-content;
+  max-height: 50vh;
+  overflow: auto;
+  width: auto;
+}
+.mainTargetTable {
+  max-width: fit-content;
+  width: 100%;
+  max-height: 400px;
+  overflow: auto;
+}
+.viewTable tr:nth-of-type(1) {
+  background-color: #f5d5a7 !important;
+}
+
+.firstViewTable tr:nth-of-type(1) {
+  background-color: #f5d5a7 !important;
+}
+// th {
+//   background-color: #f5d5a7 !important;
+// }
+.pink {
+  background-color: #d4e7fb;
+  // font-weight: bold;
+  font-size: 13px;
+}
+.wowTable th {
+  background-color: white !important;
+}
+// .react-datepicker__input-container::before {
+//   content: "FY";
+//   position: absolute;
+//   left: 8px;
+//   // top: 3px;
+// }
+// input[type="text"] {
+//   padding-left: 30px !important;
+// }
+
+.wowFirstTh {
+  position: sticky !important;
+  top: 0px;
+  z-index: 16 !important;
+  text-overflow: ellipsis;
+  background-color: whitesmoke !important;
+}
+
+.wowFirstTh {
+  td:nth-of-type(1) {
+    background-color: #f5d5a7;
+    // font-weight: bold;
+  }
+}
+
+.targetTable {
+  th:first-of-type,
+  td:first-of-type {
+    position: sticky !important;
+    left: 0;
+    // background-color: white !important;
+    min-width: 220px !important;
+  }
+  td:first-of-type {
+    z-index: 17 !important;
+  }
+  th:first-of-type {
+    z-index: 18 !important;
+  }
+  td.winter {
+    background-color: whitesmoke !important;
+  }
+}
+
+.firstViewTable tr:nth-of-type(2) td {
+  background-color: #b3bdc7;
+  font-weight: bold;
+}
+
+.viewSecondTable {
+  tr:nth-of-type(2) {
+    background-color: #b3bdc7;
+    font-weight: bold;
+  }
+}
+.viewSecondTable tr:first-child {
+  position: sticky !important;
+  top: 0px !important;
+  z-index: 16 !important;
+  text-overflow: ellipsis;
+  background-color: whitesmoke; /* If you want to add background color to the sticky row */
+}
+table.table.table-bordered.firstViewTable {
+  font-size: 13px !important;
+}
+table.table.table-bordered.viewSecondTable {
+  font-size: 13px !important;
+}
+th.targetth.targetFirstTh {
+  top: -1px;
+  position: sticky !important;
+}
+
+.targetDatepicker .react-datepicker {
+  max-height: 147px;
+  overflow-y: scroll;
+}

@@ -1,0 +1,168 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.headCountTable {
+  table {
+    max-height: 78vh;
+    border-collapse: separate;
+    // td {
+    //   display: block;
+    // }
+    tr {
+      &:has(.parent) {
+        td {
+          border-top-width: 2px;
+        }
+      }
+      &:has(span.child > b) {
+        td {
+          border-top-width: 2px;
+          &:first-of-type {
+            border-left-width: 2px;
+          }
+          &:last-of-type {
+            border-right-width: 2px;
+          }
+        }
+      }
+      &:has(span.child) {
+        td {
+          &:first-of-type {
+            border-left-width: 2px;
+          }
+          &:last-of-type {
+            border-right-width: 2px;
+          }
+        }
+      }
+      th,
+      td {
+        min-width: 100px;
+        width: 100px;
+        max-width: none;
+        vertical-align: middle;
+        &:nth-of-type(2) {
+          display: none;
+        }
+        &:first-of-type {
+          min-width: 190px;
+          max-width: 190px;
+          border-left: 1px solid #ccc;
+        }
+        &:nth-of-type(3) {
+          min-width: 190px;
+          max-width: 190px;
+        }
+      }
+
+      th {
+        & > * {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: -5px;
+        }
+      }
+      td {
+        &:has(.total) {
+          background-color: #ffffe6;
+        }
+        &:has(.greenColumn) {
+          background-color: #f2f8ef;
+        }
+        &:first-of-type {
+          border-bottom: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+.headCountTable {
+  .buRM,
+  .buRMchild {
+    color: #e17658;
+  }
+  .custRM,
+  .custRMchild {
+    color: #429063;
+  }
+  .projRM,
+  .projRMchild {
+    color: #800080;
+  }
+  .resRM,
+  .resRMchild {
+    color: #b8860b;
+  }
+  .leafRM,
+  .leafRMchild {
+    color: #0c0900;
+  }
+
+  tr {
+    td:has(.total) {
+      background-color: #ffffe6 !important ;
+    }
+    &:has(.buRM) {
+      td {
+        border-top: 1.5px solid #e17658 !important;
+      }
+    }
+    // &:has(.buRMchild) {
+    //   border-left: 1.5px solid #e17658;
+    //   border-right: 1.5px solid #e17658;
+    // }
+    &:has(.custRM) {
+      td {
+        border-top: 1.5px solid #429063 !important;
+      }
+    }
+    // &:has(.custRMchild) {
+    //   border-left: 1.5px solid #429063;
+    //   border-right: 1.5px solid #429063;
+    // }
+    &:has(.projRM) {
+      td {
+        border-top: 1.5px solid #800080 !important;
+      }
+    }
+    // &:has(.projRMchild) {
+    //   border-left: 1.5px solid #800080;
+    //   border-right: 1.5px solid #800080;
+    // }
+    &:has(.resRM) {
+      td {
+        border-top: 1.5px solid #b8860b !important;
+      }
+    }
+    // &:has(.resRMchild) {
+    //   border-left: 1.5px solid #b8860b;
+    //   border-right: 1.5px solid #b8860b;
+    // }
+    &:has(.leafRM) {
+      td {
+        border-top: 1.5px solid #0c0900 !important;
+      }
+    }
+  }
+}
+
+.headCountTable.headCount-Revenue-Margin-Table.darkHeader {
+  table {
+    thead {
+      tr {
+        th {
+          &:nth-of-type(1) {
+            max-width: 150px !important;
+            min-width: 150px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.headCountTable.darkHeader:not(.toHead) tbody tr td:has(.total) {
+  background-color: #ffffe6 !important;
+}

@@ -1,0 +1,106 @@
+{
+    "targets" : [
+        {
+            "id": "0",
+            "category": "Total",
+            "qrtr": "2023-Q1",
+            "target": "21877020",
+            "realised": "20821102"
+        },
+        {
+            "id": "1",
+            "category": "Service",
+            "qrtr": "2023-Q1",
+            "target": "21877020",
+            "realised": "19473895"
+        },
+        {
+            "id": "2",
+            "category": "Software",
+            "qrtr": "2023-Q1",
+            "target": "0",
+            "realised": "1347207"
+        }
+    ],
+    "pracRecRev" : [
+        {
+            "id": "0",
+            "category": "Total",
+            "qrtr": "2023-Q1",
+            "target": "21877020",
+            "realised": "19473895"
+        },
+        {
+            "id": "1",
+            "category": "DACS",
+            "qrtr": "2023-Q1",
+            "target": "12767334",
+            "realised": "9085030"
+        },
+        {
+            "id": "3",
+            "category": "IM&A",
+            "qrtr": "2023-Q1",
+            "target": "2612613",
+            "realised": "3074606"
+        },
+        {
+            "id": "4",
+            "category": "QA&TA",
+            "qrtr": "2023-Q1",
+            "target": "6236532",
+            "realised": "7070080"
+        },
+        {
+            "id": "6",
+            "category": "Prolifics Products",
+            "qrtr": "2023-Q1",
+            "target": "260541",
+            "realised": "244179"
+        }
+    ],
+    "locRecRev" : [
+        {
+            "id": "0",
+            "category": "Total",
+            "qrtr": "2023-Q1",
+            "target": "21877020",
+            "realised": "19473895"
+        },
+        {
+            "id": "1",
+            "category": "UK",
+            "qrtr": "2023-Q1",
+            "target": "2572399",
+            "realised": "2467333"
+        },
+        {
+            "id": "2",
+            "category": "US",
+            "qrtr": "2023-Q1",
+            "target": "13396760",
+            "realised": "9221221"
+        },
+        {
+            "id": "3",
+            "category": "India",
+            "qrtr": "2023-Q1",
+            "target": "5538129",
+            "realised": "6972122"
+        },
+        {
+            "id": "5",
+            "category": "Germany",
+            "qrtr": "2023-Q1",
+            "target": "337779",
+            "realised": "174596"
+        },
+        {
+            "id": "6",
+            "category": "Canada",
+            "qrtr": "2023-Q1",
+            "target": "31953",
+            "realised": "638623"
+        }
+    ]
+}

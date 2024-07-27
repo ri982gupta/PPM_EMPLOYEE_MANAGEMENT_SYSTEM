@@ -1,0 +1,78 @@
+// rowspan mixin for Material React Table
+@mixin mixer($thHeight) {
+  th {
+    &:has(.mixer) {
+      border-bottom: 0;
+      border-right: 0;
+      position: relative;
+      padding: 0;
+
+      & > * {
+        padding: 0 16px;
+        background-color: inherit;
+        border-bottom: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+
+        //mixin Values
+        margin-bottom: -#{$thHeight/2}px;
+        height: #{$thHeight}px;
+      }
+    }
+  }
+}
+
+@mixin mixerCustom($thHeight) {
+  th {
+    &:has(.mixerCustom) {
+      border-bottom: 0;
+      border-right: 0;
+      // position: relative;
+      padding: 0;
+
+      & > * {
+        padding: 0 16px;
+        background-color: inherit;
+        border-top: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+
+        //mixin Values
+        margin-top: -#{$thHeight/2}px;
+        height: #{$thHeight}px;
+      }
+    }
+  }
+}
+
+@mixin mixerCustomthree($thHeight) {
+  th {
+    &:has(.mixerCustomthree) {
+      border-bottom: 0;
+      border-right: 0;
+      // position: relative;
+      padding: 0;
+
+      & > * {
+        padding: 0 16px;
+        background-color: inherit;
+        // border-top: 1px solid #ccc;
+        // border-right: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+
+        //mixin Values
+        margin-top: -#{$thHeight/1.46}px;
+        height: #{$thHeight}px;
+      }
+    }
+  }
+}
+
+@mixin ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

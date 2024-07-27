@@ -1,0 +1,224 @@
+@import "../../scss/variables";
+
+.Vendor-sub-heading {
+  background: #fff;
+  font-size: 14px;
+  padding: 10px 0;
+  border-radius: 8px 8px 0 0;
+  color: #15a7ea;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.colWidth {
+  width: 80px !important;
+}
+
+/*////////////////// Heading Title //////////////////////*/
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot1 {
+  height: 12px;
+  width: 12px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot2 {
+  height: 12px;
+  width: 12px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.d {
+  position: sticky;
+  top: -1px;
+
+  cursor: pointer;
+  z-index: 1000;
+
+  white-space: nowrap !important;
+  left: -1px !important;
+}
+
+.popup {
+  overflow: hidden;
+  width: 240px;
+  height: 80px;
+  text-align: left;
+  top: 240px !important;
+  left: 1px;
+}
+
+.header {
+  text-align: center;
+}
+
+.button1 {
+  height: fit-content;
+  width: fit-content;
+
+  // background: none repeat scroll none;
+  border: 0 none;
+
+  padding: 1;
+}
+
+.ellpss {
+  max-width: 313px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ResourceTR th:nth-of-type(2) {
+  left: 42px !important;
+  z-index: 99999;
+}
+
+// .ResourceTR th:nth-of-type(1) {
+//   left: 50px !important;
+//   z-index: 999;
+
+// }
+
+.resourceTD:nth-of-type(1) {
+  position: sticky;
+  left: -10px;
+  background-clip: padding-box;
+
+  background-color: #fff;
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* text-align: left; */
+}
+
+.ResourceTR .resourceTD:nth-of-type(2) {
+  position: sticky;
+  left: 42px;
+  background-clip: padding-box;
+
+  background-color: #fff;
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ResourceTable {
+  border: 0ch;
+  // scroll-margin-inline-end: 20px;
+  border-collapse: separate;
+}
+
+.ResourceTR .resourceTD th:nth-of-type(2) {
+  content: "";
+  position: absolute;
+  width: 0.5px;
+  height: 100%;
+  top: 0;
+  left: -1px;
+  background-color: #eeeeee;
+}
+
+.ResourceTR th:nth-of-type(1) {
+  left: -10px !important;
+  z-index: 1001;
+}
+
+/* dsgdfghdjhfgjghkhjklhjljkl ----------------------------------------------------------------- */
+
+.table1 {
+  width: 110%;
+
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table1 .resourceTD {
+  border-bottom: 1px solid rgb(194, 185, 185);
+  border-right: 2px solid rgb(194, 185, 185);
+  border: 1px solid rgb(194, 185, 185);
+}
+
+.table1,
+.d {
+  border: 1px solid rgb(194, 185, 185);
+}
+
+// .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation8.MuiPopover-paper.css-3bmhjh-MuiPaper-root-MuiPopover-paper {
+//   left: 257px !important;
+//   top: 255px !important;
+// }
+
+.raa {
+  font-size: 13px;
+}
+
+#simple-popover {
+  top: 257px !important;
+  left: 255px !important;
+  position: "relative" !important;
+  //  right: "-500px"
+}
+
+// -----------------------------------
+.hover-underline-animation {
+  // display: inline-block;
+  position: relative;
+  cursor: pointer;
+  color: #15a7ea;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #15a7ea;
+  // transform-origin: bottom right;
+  // transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.totalhc {
+  margin: -10px;
+  position: relative;
+  right: -12px;
+}
+
+.t4 {
+  padding-left: 4px;
+}
+
+.resourcePopup {
+  & > div:first-of-type {
+    padding: 4px 8px;
+    background-color: $lightGray;
+    h2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}

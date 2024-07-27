@@ -1,0 +1,94 @@
+@import "../../scss/variables";
+.salaryBandTable {
+  table {
+    thead {
+    }
+    tbody {
+    }
+    tr {
+      th,
+      td {
+        &:nth-last-of-type(1) {
+          width: 40px;
+        }
+        &:nth-last-of-type(2) {
+          width: 60px;
+        }
+        &:nth-of-type(1) {
+          width: 80px;
+        }
+        &:nth-of-type(4) {
+          width: 150px;
+        }
+        &:nth-of-type(5) {
+          width: 150px;
+        }
+        &:nth-of-type(6) {
+          width: 90px;
+        }
+        &:nth-of-type(7) {
+          width: 100px;
+        }
+        &:nth-of-type(9) {
+          width: 60px;
+        }
+      }
+      td {
+        min-height: 26px;
+        &:nth-last-of-type(1) {
+          border-left: 0;
+          button {
+            float: left;
+          }
+        }
+        &:nth-last-of-type(2) {
+          display: inline-flex;
+          justify-content: flex-end;
+        }
+        &:nth-of-type(4) {
+          text-align: right;
+        }
+        &:nth-of-type(5) {
+          text-align: right;
+        }
+        &:nth-of-type(6) {
+          text-align: right;
+        }
+      }
+      th {
+        &:nth-last-of-type(1) {
+          border-left: 0;
+          text-align: left;
+          span {
+            margin-left: -50px;
+          }
+        }
+        &:nth-last-of-type(2) {
+          border-right: 0 !important;
+        }
+      }
+    }
+  }
+
+  .p-paginator-bottom {
+    align-items: baseline;
+  }
+}
+
+.primeTableSearch-upload-add-btn-container {
+  display: flex;
+  justify-content: space-between;
+  .upload-add-btn {
+    display: flex;
+    gap: 5px;
+  }
+}
+
+.primeTableSearch-filter {
+  .pi-search {
+    z-index: 2 !important;
+    position: relative;
+    left: 26px;
+    top: 2px;
+  }
+}

@@ -1,0 +1,131 @@
+@import "../../scss/variables";
+
+.flowChart {
+  display: table;
+  margin: 20px auto;
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $black;
+    font-size: $bigFont;
+  }
+  .label {
+    color: $black;
+    font-weight: 500;
+    font-size: $smallFont;
+    line-height: 1.15;
+    height: 20px;
+  }
+  .circle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: auto;
+    border: 1px solid $black;
+  }
+  .bCircle {
+    width: 120px;
+    text-align: center;
+    float: left;
+  }
+  .tCircle {
+    width: 120px;
+    text-align: center;
+    float: left;
+    &:first-of-type {
+      margin-left: 150px;
+    }
+  }
+  hr {
+    color: $black;
+    margin: 0px;
+  }
+  .tvline {
+    height: 15px;
+    border-left: 1px solid $black;
+    margin-left: 50%;
+  }
+  .bvline {
+    height: 15px;
+    border-left: 1px solid $black;
+    margin-left: 50%;
+  }
+  a {
+    &.count {
+      text-decoration: none;
+      cursor: pointer;
+      &.zero {
+        color: $black;
+        cursor: default;
+        &:hover {
+          color: $black !important;
+        }
+      }
+    }
+  }
+}
+.flowBox {
+  display: flex;
+  margin: 50px auto 30px;
+  justify-content: center;
+  .flowContainer {
+    display: inline-flex;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+    &::before {
+      content: "";
+      top: 50%;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $black;
+      z-index: 0;
+    }
+    .flowItem {
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      width: 130px;
+      border-radius: 5px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      &:hover {
+        box-shadow: 5px 14px 30px rgba(0, 0, 0, 0.2);
+        transform: scale(1.2, 1.2);
+      }
+      .flowItemHeader {
+        font-size: 14px;
+        background-color: $accent;
+        color: $white;
+        border-radius: 5px 5px 0 0;
+        text-align: center;
+      }
+      .flowItemContent {
+        background-color: $white;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 20px;
+        border-radius: 0 0 10px 10px;
+        a {
+          // color: $accent;
+          &.count {
+            text-decoration: none;
+            cursor: pointer;
+            &.zero {
+              color: $black;
+              cursor: default;
+              &:hover {
+                color: $black !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import "../../scss/mixins";
+
+.mfrTable {
+  table {
+    // rowspan mixin for Material React Table
+    @include mixer(44);
+  }
+  thead {
+    tr {
+      // &:nth-of-type(2) {
+      th {
+        min-width: 110px;
+        max-width: 110px;
+
+        & > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          text-align: center;
+          line-height: 1.2;
+        }
+      }
+      // }
+    }
+  }
+  tbody {
+    tr {
+      &:last-of-type {
+        td {
+          text-align: left;
+          font-weight: bold;
+        }
+      }
+      // td {
+      //   min-width: 100px;
+      //   max-width: 100px;
+      //   div {
+      //     width: 100%;
+      //   }
+      // }
+    }
+  }
+}

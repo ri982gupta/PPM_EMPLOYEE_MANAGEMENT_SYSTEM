@@ -1,0 +1,408 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.dashboardAllocationTable {
+  font-size: $tableFont;
+  // min-height: 194px;
+  // overflow-y: scroll;
+
+  & > div {
+    box-shadow: 0 0 0;
+    border-left-color: $lightGray;
+  }
+
+  .datepicker {
+    z-index: 4;
+  }
+
+  .MuiBox-root .css-di3982 {
+    display: none;
+  }
+
+  a {
+    color: $accent !important;
+    text-decoration: underline !important;
+  }
+
+  .expandIcon {
+    padding: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ellipsis {
+    text-align: center;
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 135px;
+  }
+
+  @include mixer(49);
+
+  th {
+    & > div {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  th,
+  td {
+    &:has(.odd) {
+      background-color: #f5e5e5 !important;
+      justify-content: flex-end;
+    }
+
+    &:has(.even) {
+      background-color: #d8eaea;
+      justify-content: flex-end;
+    }
+
+    &:has(.total) {
+      background-color: #ffffe6;
+      justify-content: flex-end;
+    }
+
+    &:has(.sm) {
+      min-width: 60px;
+      max-width: 60px;
+      
+    }
+
+    &:has(.sm.mixer, .sm.emp-cadre){
+      max-width: 80px !important;
+      min-width: 80px !important;
+    }
+
+    &:has(.md) {
+      min-width: 180px;
+      max-width: 180px;
+      width: 180px;
+    }
+
+    &:has(.mixer) {
+      position: sticky;
+    }
+
+    // &:nth-of-type(3) {
+    //   min-width: 45px;
+    //   max-width: 45px;
+    //   width: 45px;
+    // }
+
+    // &:nth-of-type(4),
+    // &:nth-of-type(5):not(.sm) {
+    //   width: 180px;
+    // }
+
+    &[colspan="1"] {
+      min-width: 45px;
+      max-width: 45px;
+      width: 45px;
+
+      &:has(.sm) {
+        min-width: 60px;
+        max-width: 60px;
+        }
+
+     
+
+      &:has(.md) {
+        min-width: 180px;
+        max-width: 180px;
+        width: 180px;
+      }
+    }
+
+    &[colspan="2"] {
+      min-width: 90px;
+      max-width: 90px;
+      width: 90px;
+    }
+
+    &[colspan="3"] {
+      min-width: 135px;
+      max-width: 135px;
+      width: 135px;
+    }
+
+    &[colspan="4"] {
+      min-width: 240px;
+      max-width: 240px;
+      
+    }
+
+    &[colspan="5"] {
+      min-width: 225px;
+      max-width: 225px;
+      width: 225px;
+    }
+
+    div:has(.empName) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .empName + svg {
+        margin-left: auto;
+      }
+    }
+  }
+
+  thead {
+    tr {
+      &:nth-of-type(1) {
+        th {
+          &:nth-of-type(1) {
+            width: 80px;
+            max-width: 80px;
+            min-width: 80px;
+            z-index: 4;
+            left: 0;
+          }
+
+          &:nth-of-type(2) {
+            width: 180px;
+            max-width: 180px;
+            left: 80px;
+            z-index: 4;
+          }
+
+          &:nth-last-of-type(1) {
+            width: 250px;
+            max-width: 250px;
+            min-width: 250px;
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        th {
+          &:nth-of-type(1) {
+            width: 80px;
+            min-width: 80px;
+            max-width: 80px;
+          }
+
+          &:nth-of-type(2) {
+            width: 180px;
+            max-width: 180px;
+            left: 0;
+          }
+          &:has(.cadre-sm){
+            
+            min-width: 80px;
+          }
+
+          &:last-of-type {
+            width: 100px;
+            max-width: 100px;
+            min-width: 100px;
+          }
+
+          &:nth-last-of-type(2) {
+            width: 150px;
+            max-width: 150px;
+            min-width: 150px;
+          }
+
+          &:has(.sm),
+          &:has(.md) {
+            z-index: auto;
+          }
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr:has(.rowTotal) {
+      td {
+        justify-content: flex-end;
+        font-weight: bold;
+        background-color: #ffffe6 !important;
+      }
+    }
+
+    tr {
+      td {
+        &:nth-of-type(1) {
+          width: 80px;
+          max-width: 80px;
+          min-width: 80px;
+          left: 0;
+        }
+
+        &:nth-of-type(2) {
+          width: 180px;
+          max-width: 180px;
+          left: 80px;
+        }
+
+        &:last-of-type {
+          width: 100px;
+          max-width: 100px;
+          min-width: 100px;
+        }
+
+        &:nth-last-of-type(2) {
+          width: 150px;
+          max-width: 150px;
+          min-width: 150px;
+        }
+      }
+    }
+    min-height: 23px;
+  }
+  .MuiInputBase-root.MuiInputBase-formControl{
+      padding: 0 5px !important;
+      width: 250px;
+  }
+}
+
+.warning {
+  border: 1px solid $red !important;
+  background-color: rgba($red, 0.2) !important;
+}
+
+.AllocationDashboardActionTable {
+  table {
+    th,
+    td {
+      &:nth-of-type(4),
+      &:nth-of-type(5) {
+        width: 140px;
+      }
+
+      &:nth-of-type(6) {
+        width: 400px;
+      }
+    }
+  }
+}
+
+.businessUnitTable {
+  // width: fit-content;
+  @include mixer(49);
+
+  .MuiBox-root {
+    padding: 0;
+  }
+  table{
+    th,td{
+      &:has(.sm){
+        min-width: 60px;
+      }
+      &[colspan="4"] {
+        min-width: 240px;
+        max-width: 240px;
+        
+      }
+    }
+  }
+  tbody{
+    tr:has(.rowTotal) {
+      td {
+        // justify-content: flex-end;
+        font-weight: bold;
+        background-color: #ffffe6 !important;
+      }
+    }
+    min-height: 23px;
+    }
+  tr {
+    th {
+      &:nth-of-type(1) {
+        min-width: 280px !important;
+        max-width: 280px !important;
+      }
+    }
+
+    td {
+      &:nth-of-type(1) {
+        min-width: 280px;
+        max-width: 280px;
+        background-color: #d4e7fb;
+      }
+
+      &:not(:nth-of-type(1)) {
+        & > div {
+          text-align: right;
+          width: 100%;
+        }
+      }
+      &:has(.sm.total) {
+        background-color: #ffffe6;
+      }
+      &:has(.sm.even) {
+        background-color: #d8eaea;
+      }
+      &:has(.sm.odd) {
+        background-color: #f5e5e5;
+      }
+     
+    }
+
+    &:nth-of-type(2) {
+      th {
+        &:not(:nth-of-type(1)) {
+          & > div {
+            justify-content: center;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .MuiInputBase-root.MuiInputBase-formControl{
+    padding: 0 5px !important;
+    width: 250px;
+}
+
+}
+.businessUnitTable tr td{
+  &[colspan="17"]{
+    width: 100% !important;
+  } 
+}
+
+.teamsUtilization.dashboardAllocationTable {
+  table {
+    tbody {
+      tr:nth-last-of-type(1) {
+        td {
+          background-color: #ffffe6 !important;
+        }
+      }
+      tr {
+        td {
+          &:nth-of-type(2) {
+            justify-content: flex-start !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.alloc-dash-excel-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .sub-heading{
+    position: relative;
+    z-index: 2;
+    margin-bottom: -47px;
+    width: fit-content;
+  }
+  .excel-container{
+    position: relative;
+    z-index: 2;
+    margin-bottom: -47px;
+    width: fit-content;
+    left: 15px;
+  }
+ 
+}

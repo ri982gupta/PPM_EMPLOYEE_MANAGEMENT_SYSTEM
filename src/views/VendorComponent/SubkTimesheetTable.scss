@@ -1,0 +1,145 @@
+@import "../../scss/variables";
+.ResourceHrsTable {
+  table {
+    border-collapse: separate;
+    tr {
+      th,
+      td {
+        &:nth-of-type(n + 2) {
+          min-width: fit-content;
+        }
+        &:nth-of-type(1) {
+          position: sticky;
+          left: 0;
+          z-index: 2;
+          min-width: 150px;
+          max-width: 150px;
+        }
+        &:nth-of-type(2) {
+          position: sticky;
+          left: 150px;
+          z-index: 2;
+        }
+        &:nth-of-type(n + 3) {
+          min-width: 52px;
+        }
+      }
+      td {
+        border-right: 1px solid #ccc !important;
+      }
+    }
+  }
+  .MuiBox-root:has(.month-change-btn) {
+    margin-bottom: 13px;
+    padding: 0;
+  }
+  .MuiTableContainer-root {
+    margin-top: -15px;
+  }
+  .MuiPaper-elevation2 {
+    margin-top: -4px;
+  }
+}
+.POPUP .css-3bmhjh-MuiPaper-root-MuiPopover-paper {
+  box-shadow: none !important;
+}
+
+.comment-cell {
+  width: 90%;
+}
+.HistoryIconSubk {
+  cursor: pointer;
+  margin-top: 3px;
+}
+.subkComments {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 13px;
+}
+.css-1dmzujt {
+  box-shadow: none !important;
+}
+
+.darkHeader {
+  .SubkTimeSheet {
+    .p-datatable-wrapper {
+      overflow: auto;
+      table {
+        th {
+          &:nth-of-type(1) {
+            .p-column-header-content {
+              visibility: hidden;
+            }
+          }
+        }
+        tr {
+          &:has(.TimeSheetSummary) {
+            td {
+              font-weight: 600;
+              background-color: $tableSummaryGray !important;
+              &:nth-of-type(1) {
+                .p-checkbox {
+                  visibility: hidden;
+                }
+              }
+            }
+          }
+        }
+        .HideCheckbox {
+          td:nth-of-type(1) {
+            .p-checkbox {
+              cursor: not-allowed !important;
+              pointer-events: none !important;
+            }
+          }
+        }
+        .HideCheckbox td.p-selection-column {
+          cursor: not-allowed !important;
+        }
+        .HideCheckbox td:nth-of-type(1) .p-checkbox-box {
+          background-color: #17cb44 !important;
+        }
+      }
+    }
+  }
+}
+
+.SubkTimeSheet {
+  .p-datatable.p-datatable-gridlines .p-datatable-thead > tr > th {
+    border-width: 0 1px 0 0 !important ;
+  }
+  .p-datatable-wrapper {
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+      thead {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      }
+      tr {
+        th,
+        td {
+          border-left: 0 !important;
+          &:nth-of-type(1) {
+            position: sticky;
+            left: 0;
+            min-width: 40px;
+            max-width: 40px;
+          }
+          &:nth-of-type(2) {
+            position: sticky;
+            left: 40px;
+            min-width: 120px;
+            max-width: 120px;
+          }
+          &:nth-of-type(3) {
+            position: sticky;
+            left: 160px;
+          }
+        }
+      }
+    }
+  }
+}

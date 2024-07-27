@@ -1,0 +1,22 @@
+// .p-datatable .p-datatable-tbody > tr.p-highlight {
+//   background-color: blue !important;
+// }
+// .p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
+//   border-color: unset !important;
+// }
+// .p-checkbox .p-checkbox-box.p-highlight {
+//   border-color: unset !important;
+//   background: blue !important;
+// }
+.roleMappingTable .p-datatable > .p-datatable-wrapper {
+    overflow: auto;
+    max-height: var(--dynamic-value);
+    table{
+        border-collapse: separate;
+        thead{
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+    }
+}

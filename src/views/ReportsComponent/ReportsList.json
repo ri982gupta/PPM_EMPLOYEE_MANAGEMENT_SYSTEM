@@ -1,0 +1,64 @@
+[
+    {
+        "reportName": "Timesheet",
+        "subRow": [
+            {
+                "item1": "Allocated and Billed Hours Reprot",
+                "item2": "Reportee Report",
+                "item3": "Resource Entry Report",
+                "item4": "Timesheet Detailed Report",
+                "item5": "UnApproved Report"
+            }
+        ]
+    },
+    {
+        "reportName": "Finance",
+        "subRow": [
+            {
+                "item1": "Finance Billing Timesheet Report",
+                "item2": "Finance Report",
+                "item3": "Revenue Report"
+               
+            }
+        ]
+    },
+    {
+        "reportName": "Resource",
+        "subRow": [
+            {
+                "item1": "Billing Report",
+                "item2": "Project Resource Report",
+                "Item3": "Resource List",
+                "item4": "Resource Utilization Report"
+               
+            }
+        ]
+    },
+    {
+        "reportName": "PCQA",
+        "subRow": [
+            {
+                "item1": "Project List For CSAT"
+               
+            }
+        ]
+    },
+    {
+        "reportName": "Allocation Reports",
+        "subRow": [
+            {
+                "item1": "BU Allocation Report",
+                "item2": "Resource Allocation Report"
+               
+            }
+        ]
+    },
+    {
+        "reportName": "Expenses",
+        "subRow": [
+            {
+                "item1": "Expense Report"
+            }
+        ]
+    }
+]

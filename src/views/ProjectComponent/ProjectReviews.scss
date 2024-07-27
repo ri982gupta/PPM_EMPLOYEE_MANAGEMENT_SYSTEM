@@ -1,0 +1,27 @@
+@import "../../scss/variables";
+
+.projectReviewDatepciker input#scheduled_date {
+  text-align: center !important;
+}
+
+.ReviewLogDatepicker input.error {
+  text-align: center;
+}
+.DeliveryProjectReviews{
+   .p-datatable-wrapper{
+    overflow: auto;
+    max-height: var(--dynamic-value);
+    table{
+        border-collapse: separate;
+        thead{
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+    }
+}
+
+}
+.Project-Reviews-screen-Margin{
+  margin-bottom: 0px !important;
+}

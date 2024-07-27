@@ -1,0 +1,20 @@
+@import "../../scss/variables";
+
+.accountPlanTable {
+  table {
+    tr:first-of-type {
+      th {
+        width: 20%;
+      }
+    }
+
+    td {
+      &:has(.even) {
+        background-color: #bff5f5;
+      }
+      &:has(.odd) {
+        background-color: #f3d6d6;
+      }
+    }
+  }
+}

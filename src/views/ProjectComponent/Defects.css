@@ -1,0 +1,37 @@
+.required {
+    color: red;
+    /* position: absolute; */
+}
+
+
+.buttonDisplay {
+    background-color: #717274;
+    border: none;
+    background-image: linear-gradient(to left, #efefef 0%, #d6d6d6 100%);
+    padding: 3px 19px;
+    font-size: 12px;
+    margin: 2px 1px;
+    cursor: pointer;
+    margin-block: 0px;
+}
+
+.buttonDisplayClick {
+    background-color: #4e89d1;
+    border: none;
+    color: white;
+    padding: 3px 19px;
+    font-size: 12px;
+    margin: 2px 1px;
+    cursor: pointer;
+    margin-block: 0px;
+  }
+
+  .autoComplete  .wrapper{
+    padding-left: 0px !important;
+    margin-left: -10px;
+    
+  }
+
+  ::placeholder {
+    font-style: italic;
+  }

@@ -1,0 +1,91 @@
+@import "../../scss/variables";
+
+.dummy tr {
+  &.odd {
+    background-color: #e5f9ff;
+  }
+  &.even {
+    background-color: #fafbde;
+  }
+}
+
+tr:has(.summary) {
+  td {
+    background-color: $tableSummaryGray !important;
+
+    font-weight: bold;
+  }
+}
+
+// .dummy1 tbody th:nth-child(1) {
+//   background-color: white !important;
+// }
+// .dummy1 tbody th:nth-child(2) {
+//   background-color: white !important;
+// }
+// .dummy1 tbody th:nth-child(3) {
+//   background-color: white !important;
+// }
+// .dummy1 tbody th:nth-child(4) {
+//   background-color: white !important;
+// }
+// .dummy1 tbody th:nth-child(5) {
+//   background-color: white !important;
+// }
+// .dummy1 tbody th:nth-child(6) {
+//   background-color: white !important;
+// }
+
+.dummy1 tbody tr:nth-child(even) {
+  background-color: #e5f9ff !important;
+}
+.dummy1 tbody tr:nth-child(odd) {
+  background-color: #fafbde !important;
+}
+
+// tr:nth-child(4) {
+//   font-weight: bold;
+// }
+
+/*-----------------Kaif's Code--------------------*/
+.darkHeader {
+  .progressTablePrnt.scrollit {
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+      thead {
+        tr {
+          &:nth-of-type(1) {
+            opacity: 1 !important;
+            z-index: 3;
+            position: sticky;
+            top: 0px;
+            // border-bottom: 1px solid #ccc !important;
+            // border-spacing: 0px;
+          }
+          &:nth-of-type(2) {
+            opacity: 1 !important;
+            z-index: 3;
+            position: sticky;
+            top: 22.4px;
+            // border-bottom: 1px solid #ccc !important;
+          }
+          &:nth-of-type(3) {
+            opacity: 1 !important;
+            z-index: 3;
+            position: sticky;
+            top: 45.71px;
+            // border-bottom: 1px solid #ccc !important;
+          }
+          &:nth-of-type(n + 3) {
+            td {
+              border-bottom: 1px solid #ddd;
+              border-right: 1px solid #ddd;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*-----------------END----------------------------*/

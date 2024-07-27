@@ -1,0 +1,102 @@
+.signingTargetsTable {
+  width: 100%;
+  max-height: 45vh;
+  margin-bottom: 15px;
+  table {
+    border-collapse: separate;
+    width: 90%;
+    font-size: 13px;
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      tr {
+        th {
+          background-color: #f4f4f4;
+          vertical-align: middle;
+          min-width: 100px;
+          text-align: center;
+          font-size: 13px;
+          color: black;
+        }
+        &:first-of-type {
+          th:first-of-type {
+            position: sticky;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:first-of-type {
+          td {
+            background-color: #b3bdc7 !important;
+            font-weight: bold;
+          }
+        }
+        td {
+          &:nth-of-type(odd) {
+            background: #facbcb;
+          }
+          &:nth-of-type(even) {
+            background: #75f2f2;
+          }
+          &:last-of-type {
+            background: #f2f29f;
+          }
+          &:nth-of-type(1) {
+            background: #d4e7fb;
+            & span {
+              width: calc(100% - 45px);
+              text-overflow: ellipsis;
+              overflow-x: hidden;
+              white-space: nowrap;
+            }
+          }
+        }
+        &:nth-of-type(1) {
+          td {
+            background: #f5d5a7;
+          }
+        }
+      }
+    }
+    tr {
+      @mixin stickyStyles {
+        &:nth-of-type(1) {
+          width: 280px;
+          max-width: 180px;
+          z-index: 2;
+          div {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+          }
+        }
+      }
+
+      input[type="text"] {
+        float: right;
+        border-color: #91B4B7 !important;
+        border-radius: 1px !important;
+        width: 150px !important;
+        border-width: 1px;
+        text-align: right;
+        padding-right: 3px;
+        font-size: 13px !important;
+        height: 28px !important;
+      }
+
+      &:nth-of-type(1) {
+        th {
+          @include stickyStyles;
+        }
+      }
+      td {
+        @include stickyStyles;
+      }
+    }
+  }
+}

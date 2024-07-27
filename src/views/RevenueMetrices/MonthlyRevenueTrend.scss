@@ -1,0 +1,357 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.tabletitle h2 {
+  color: #02277f;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  background-color: #eee;
+  /* margin-top: 0px; */
+  border-radius: 4px;
+}
+.bold-row {
+  font-weight: bold;
+}
+.headerStructure {
+  font-size: 14px;
+  color: #2e88c5;
+  font-weight: bold;
+  span {
+    padding-left: 25px;
+  }
+}
+
+.revenueForecastBuTable.trendCust.darkHeader:not(.toHead)
+  tbody
+  tr:nth-of-type(odd)
+  td {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: #eef2f5 !important;
+}
+
+.revenueForecastBuTable-trend-by-region {
+  font-size: $tableFont;
+
+  &:not(.toHead) {
+    tbody {
+      tr {
+        &:has(.odd) {
+          td {
+            background-color: #eef2f5 !important;
+            border-top: 1px solid rgba($black, 0.1);
+            border-bottom: 1px solid rgba($black, 0.1);
+          }
+        }
+      }
+    }
+  }
+  & > div {
+    box-shadow: 0 0 0;
+  }
+  table {
+    thead {
+      position: sticky;
+      top: 0px;
+      z-index: 5;
+    }
+    border-collapse: separate;
+    // rowspan mixin for Material React Table
+    @include mixer(50);
+
+    tr:has(.summary) {
+      td {
+        background-color: $tableSummaryGray !important;
+        font-weight: bold !important;
+      }
+    }
+
+    tr {
+      &:nth-of-type(1) {
+        th {
+          &:nth-of-type(1) {
+            z-index: 3;
+          }
+          &:nth-of-type(2) {
+            z-index: 3;
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        th {
+          &:nth-of-type(1) {
+            z-index: 1;
+          }
+
+          &:has(.mixer) {
+            border-top: 0;
+          }
+        }
+      }
+
+      th,
+      td {
+        &:nth-of-type(1) {
+          position: sticky;
+          // z-index: 20;
+          left: 0;
+          min-width: 70px;
+          max-width: 70px;
+        }
+
+        &:nth-of-type(2) {
+          min-width: 200px;
+          position: sticky !important;
+          // z-index: 20;
+          left: 70px;
+        }
+      }
+
+      th {
+        vertical-align: middle;
+      }
+    }
+    thead {
+      tr {
+        &:first-of-type {
+          th {
+            height: 25px;
+          }
+        }
+        th {
+          & > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            line-height: 1.2;
+          }
+        }
+
+        th:first-of-type {
+          border-left: 1px solid #ccc;
+        }
+
+        th:nth-of-type(2) {
+          & > div {
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:has(.hExpandedTxt) {
+          background-color: $white;
+        }
+        &:has(.lvl-1) {
+          td {
+            &:nth-of-type(1) {
+              button {
+                margin-left: 5px;
+                width: 15px;
+                padding: 0;
+                border-radius: 0;
+              }
+            }
+            &:nth-of-type(2) {
+              padding-left: 5px !important;
+            }
+          }
+        }
+        &:has(.lvl-2) {
+          td {
+            &:nth-of-type(1) {
+              button {
+                margin-left: 15px;
+                width: 15px;
+                padding: 0;
+                border-radius: 0;
+              }
+            }
+            &:nth-of-type(2) {
+              padding-left: 15px !important;
+            }
+          }
+        }
+        &:has(.lvl-3) {
+          td {
+            &:nth-of-type(1) {
+              button {
+                margin-left: 21px;
+                width: 15px;
+                padding: 0;
+                border-radius: 0;
+              }
+            }
+            &:nth-of-type(2) {
+              padding-left: 25px !important;
+            }
+          }
+        }
+        &:has(.lvl-4) {
+          td {
+            &:nth-of-type(1) {
+              button {
+                margin-left: 29px;
+                width: 15px;
+                padding: 0;
+                border-radius: 0;
+              }
+            }
+            &:nth-of-type(2) {
+              padding-left: 30px !important;
+            }
+          }
+        }
+        &:has(.lvl-5) {
+          td {
+            &:nth-of-type(1) {
+              button {
+                margin-left: 37px;
+                width: 15px;
+                padding: 0;
+                border-radius: 0;
+              }
+            }
+            &:nth-of-type(2) {
+              padding-left: 35px !important;
+            }
+          }
+        }
+        &:has(.lvl-6) {
+          td {
+            &:nth-of-type(1) {
+              button {
+                margin-left: 45px;
+                width: 15px;
+                padding: 0;
+                border-radius: 0;
+              }
+            }
+            &:nth-of-type(2) {
+              padding-left: 40px !important;
+            }
+          }
+        }
+        &:has(.lvl-7) {
+          td {
+            &:nth-of-type(1) {
+              button {
+                margin-left: 53px;
+                width: 15px;
+                padding: 0;
+                border-radius: 0;
+              }
+            }
+            &:nth-of-type(2) {
+              padding-left: 45px !important;
+            }
+          }
+        }
+        &:has(.lvl-8) {
+          td {
+            &:nth-of-type(1) {
+              button {
+                margin-left: 61px;
+                width: 15px;
+                padding: 0;
+                border-radius: 0;
+              }
+            }
+            &:nth-of-type(2) {
+              padding-left: 50px !important;
+            }
+          }
+        }
+        &:has(.lvl-9) {
+          td {
+            &:nth-of-type(1) {
+              button {
+                margin-left: 69px;
+                width: 15px;
+                padding: 0;
+                border-radius: 0;
+              }
+            }
+            &:nth-of-type(2) {
+              padding-left: 55px !important;
+            }
+          }
+        }
+        &:has(.lvl-10) {
+          td {
+            &:nth-of-type(1) {
+              button {
+                margin-left: 77px;
+                width: 15px;
+                padding: 0;
+                border-radius: 0;
+              }
+            }
+            &:nth-of-type(2) {
+              padding-left: 60px !important;
+            }
+          }
+        }
+        td {
+          &:nth-of-type(1) {
+            z-index: 3;
+          }
+
+          &:nth-of-type(2) {
+            z-index: 3;
+            text-align: left;
+          }
+          // min-width: 100px;
+          // max-width: 100px;
+          div {
+            // display: flex;
+            align-items: center;
+            gap: 5px;
+            // width: 100%;
+
+            img + span {
+              margin-top: 3px;
+              font-size: 12px;
+            }
+          }
+          & > span {
+            width: 100%;
+            &:nth-of-type(2) {
+              text-align: left;
+            }
+          }
+        }
+
+        td:first-of-type {
+          border-left: 1px solid #ccc;
+          max-width: 70px;
+
+          button {
+            height: 22px;
+            width: 22px;
+            padding-left: 27px;
+
+            svg {
+              height: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.MRT-summary-by-region-screen-excel-logo {
+  text-align: right;
+}
+
+.headerstructure-wrapper {
+  text-align: center;
+  flex: 1;
+}

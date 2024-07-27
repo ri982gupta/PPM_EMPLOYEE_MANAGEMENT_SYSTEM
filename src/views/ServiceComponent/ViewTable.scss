@@ -1,0 +1,409 @@
+@import "../../scss/variables";
+
+.serviceViewTable {
+  // max-height: calc(100vh - 160px);
+  max-height: var(--dynamic-value);
+  overflow: auto;
+  margin-top: 20px;
+  width: 100%;
+
+  table {
+    border-collapse: separate;
+    width: auto;
+    font-size: 13px;
+    .cslStyl {
+      position: sticky;
+      left: 250px;
+      z-index: 2;
+      background-color: $white;
+      min-width: 180px;
+    }
+    .accTypeStyl {
+      position: sticky;
+      left: 430px;
+      z-index: 1;
+      background-color: $white;
+    }
+    .covStyl {
+      position: sticky;
+      left: 528px;
+      z-index: 1;
+      background-color: $white;
+    }
+    .cslStyl2 {
+      background-color: #d4e7fb;
+      position: sticky;
+      left: 250px;
+      z-index: 2;
+      min-width: 180px;
+    }
+    .accTypeStyl2 {
+      position: sticky;
+      left: 430px;
+      z-index: 1;
+      background-color: #d4e7fb;
+    }
+    .covStyl2 {
+      position: sticky;
+      left: 528px;
+      z-index: 1;
+      background-color: #d4e7fb;
+    }
+
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      white-space: nowrap;
+      tr {
+        th {
+          background-color: #f4f4f4;
+          vertical-align: middle;
+          font-size: 13px;
+          color: black;
+        }
+        &:first-of-type {
+          th:first-of-type {
+            position: sticky;
+            left: 0;
+          }
+        }
+      }
+    }
+    tbody {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      tr {
+        td {
+          &:first-of-type {
+            min-width: 250px;
+            max-width: 250px;
+            position: sticky;
+            left: 0;
+            background-color: #d4e7fb;
+            div {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 2px;
+              & > span:nth-of-type(3),
+              & > span:nth-of-type(4) {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+              }
+              & > *:last-of-type {
+                margin-left: auto;
+              }
+            }
+            &:has(.collapsedRow) {
+              background-color: $white;
+              div {
+                padding-left: 40px;
+                & > *:last-of-type {
+                  margin-left: 0;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                }
+              }
+            }
+
+            &:has(.collapsedRow2) {
+              background-color: $white;
+              div {
+                padding-left: 50px;
+                & > *:last-of-type {
+                  margin-left: 0;
+                }
+              }
+            }
+
+            &:has(.collapsedRow3) {
+              background-color: $white;
+              div {
+                // padding-left: 0px;
+                & > *:last-of-type {
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+      tr:nth-of-type(1) {
+        td {
+          // background-color: #f5d5a7 ;
+          background-color: $tableSummaryGray;
+          font-weight: bold;
+        }
+      }
+      .even {
+        background-color: #facbcb;
+        text-align: right;
+      }
+      .odd {
+        background-color: #75f2f2;
+        text-align: right;
+      }
+      .total {
+        background-color: #f2f29f;
+        text-align: right;
+      }
+      .executive {
+        background-color: #d4e7fb;
+      }
+      .innerodd {
+        background-color: #d8eaea;
+        text-align: right;
+      }
+      .innereven {
+        background-color: #f5e5e5;
+        text-align: right;
+      }
+      tr {
+        &:has(.collapsedRow) {
+          .even {
+            background-color: (#f3d6d6);
+            text-align: right;
+          }
+          .odd {
+            background-color: lighten(#75f2f2, 15%);
+            text-align: right;
+          }
+          .total {
+            background-color: lighten(#f2f29f, 7%);
+            text-align: right;
+          }
+          .executive {
+            background-color: lighten(#d4e7fb, 7%);
+          }
+          .innerodd {
+            background-color: lighten(#d8eaea, 7%);
+            text-align: right;
+          }
+          .innereven {
+            background-color: lighten(#f5e5e5, 5%);
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sfPipelineTable {
+  max-height: 400px;
+  overflow-y: scroll;
+  th,
+  td {
+    max-width: 150px;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 13px;
+    &:first-of-type {
+      background-color: #d4e7fb;
+      min-width: 250px;
+      max-width: 250px;
+      position: sticky;
+      left: 0;
+      z-index: 1;
+    }
+    &:nth-of-type(2) {
+      position: sticky;
+      left: 250px;
+      z-index: 1;
+    }
+  }
+  table {
+    border-collapse: separate;
+    width: auto;
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      th {
+        background-color: #f4f4f4;
+        font-size: 13px;
+        color: black;
+      }
+    }
+
+    tbody {
+      tr {
+        .amountCollapse1 {
+          background-color: #d4e7fb;
+        }
+        .probCollapse {
+          max-width: 10px;
+        }
+        .probCollapse1 {
+          background-color: #d4e7fb;
+        }
+        .closedDateCollapse1 {
+          background-color: #d4e7fb;
+        }
+        .opportunityCollapse1 {
+          background-color: #d4e7fb;
+        }
+        .countryCollapse1 {
+          background-color: #d4e7fb;
+        }
+        &:nth-of-type(1) {
+          td {
+            background-color: $tableSummaryGray !important;
+            font-weight: bold;
+          }
+        }
+        td {
+          background-color: $white;
+        }
+        .even {
+          background-color: #facbcb;
+          text-align: right;
+        }
+        .odd {
+          background-color: #75f2f2;
+          text-align: right;
+        }
+        .total {
+          background-color: #f2f29f;
+          text-align: right;
+          min-width: 100px;
+        }
+        .innerodd {
+          background-color: #d8eaea;
+          text-align: right;
+        }
+        .innereven {
+          background-color: #f5e5e5;
+          text-align: right;
+        }
+        .amount {
+          text-align: right;
+          background-color: #f2f29f;
+        }
+        &:has(.collapsedRow) {
+          td {
+            font-weight: 400;
+
+            &:first-of-type {
+              span {
+                display: flex;
+                gap: 3px;
+                align-items: center;
+                padding-left: 20px;
+                & > *:last-of-type {
+                  margin-left: 0;
+                }
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                width: fit-content;
+              }
+            }
+            &:has(.collapsedRow) {
+              background-color: $white;
+              div {
+                padding-left: 40px;
+                & > *:last-of-type {
+                  margin-left: 0;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                }
+              }
+            }
+
+            &:has(.collapsedRow2) {
+              background-color: $white;
+              div {
+                padding-left: 50px;
+                & > *:last-of-type {
+                  margin-left: 0;
+                }
+              }
+            }
+
+            &:has(.collapsedRow3) {
+              background-color: $white;
+              div {
+                // padding-left: 0px;
+                & > *:last-of-type {
+                  margin-left: 0;
+                }
+              }
+            }
+            &:nth-of-type(2) {
+              // min-width: 200px;
+              span {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 5px;
+                a {
+                  width: 85%;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                }
+              }
+            }
+            &:nth-of-type(3) {
+              span {
+                display: flex;
+                justify-content: space-between;
+                gap: 5px;
+                a {
+                  width: 85%;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                }
+              }
+            }
+            &:nth-of-type(5) {
+              span {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 5px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                float: right;
+              }
+            }
+          }
+
+          .even {
+            background-color: lighten(#facbcb, 7%);
+            text-align: right;
+          }
+          .odd {
+            background-color: lighten(#75f2f2, 7%);
+            text-align: right;
+          }
+          .total {
+            // background-color: lighten(#ffffe6, 3%);
+            text-align: right;
+          }
+          .innerodd {
+            background-color: lighten(#d8eaea, 7%);
+            text-align: right;
+          }
+          .innereven {
+            background-color: lighten(#f5e5e5, 7%);
+            text-align: right;
+          }
+          .amount {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

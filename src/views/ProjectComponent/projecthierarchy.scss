@@ -1,0 +1,9 @@
+@import "../../scss/variables";
+
+.hierCalender.react-datepicker-wrapper {
+  .react-datepicker__input-container {
+    input {
+      max-width: 80px;
+    }
+  }
+}

@@ -1,0 +1,199 @@
+@import "../../scss/variables";
+
+.attainTablePrnt {
+  table {
+    border-collapse: separate;
+    thead {
+      background: $white;
+      tr:first-of-type {
+        th:first-of-type {
+          background-color: #f5f5f5;
+          z-index: 3;
+        }
+      }
+      tr:nth-of-type(even) {
+        th:nth-of-type(even) {
+          background-color: #f5f5f5;
+        }
+        th:nth-of-type(odd) {
+          background-color: #f5f5f5;
+        }
+      }
+      tr {
+        &:nth-of-type(1) {
+          position: sticky;
+          z-index: 7;
+          top: 0;
+          th {
+            &:first-of-type {
+              position: sticky;
+              left: 0;
+              z-index: 2;
+            }
+          }
+        }
+        &:nth-of-type(2) {
+          position: sticky;
+          z-index: 3;
+          top: 22.42px;
+        }
+        &:nth-of-type(3) {
+          position: sticky;
+          z-index: 3;
+          top: 45.84px;
+        }
+      }
+      th {
+        &.attainth:first-of-type {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  td {
+    &:first-of-type {
+      position: sticky;
+      left: 0;
+      z-index: 2;
+    }
+  }
+  tr:nth-of-type(odd) {
+    td:first-of-type {
+      background-color: #d4e7fb;
+    }
+  }
+  tr:nth-of-type(even) {
+    td:first-of-type {
+      background-color: #d4e7fb;
+    }
+  }
+
+  .executive {
+    min-width: 219px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cp {
+    // margin: 0px auto !important;
+    float: left;
+  }
+  .executiveName {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    span {
+      white-space: nowrap !important;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 80%;
+    }
+  }
+
+  .cpContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+
+    .cp {
+      font-style: normal;
+      background-color: #428bca;
+      color: white;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px; // Check
+    }
+  }
+
+  td {
+    min-width: 105px;
+  }
+
+  tr:nth-of-type(4) {
+    td {
+      background-color: $tableSummaryGray !important;
+      font-weight: bold;
+    }
+  }
+
+  .service,
+  .software {
+    text-align: right;
+  }
+
+  .attainth {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .attaintd.Q1,
+  .attaintd.Q3 {
+    background-color: #75f2f2;
+    text-align: right;
+  }
+
+  .attaintd.Q2,
+  .attaintd.Q4 {
+    background-color: #facbcb;
+    text-align: right;
+  }
+
+  td.total.attaintd.service,
+  td.total.attaintd.software {
+    background-color: #f2f29f;
+  }
+}
+
+.cpContainer {
+  cursor: pointer;
+}
+
+.attainprogresstable {
+  tr:nth-of-type(3) {
+    td {
+      background-color: $tableSummaryGray !important;
+      font-weight: bold;
+      font-size: 13px;
+      &.noTableData {
+        background-color: $white !important;
+        --cui-table-accent-bg: rgba($white, 0) !important;
+      }
+    }
+  }
+
+  .attaintd.Q1,
+  .attaintd.Q3 {
+    background-color: #75f2f2;
+    text-align: right;
+    font-size: 13px;
+  }
+
+  .attaintd.Q2,
+  .attaintd.Q4 {
+    background-color: #facbcb;
+    text-align: right;
+    font-size: 13px;
+  }
+
+  td.total.attaintd.service,
+  td.total.attaintd.software {
+    background-color: #f2f29f;
+    text-align: right;
+  }
+  .attainth {
+    text-align: center;
+    vertical-align: middle;
+    background-color: #f5f5f5;
+    --cui-table-accent-bg: rgba($white, 0) !important;
+  }
+}
+.attainTable {
+  font-size: 14px !important;
+}

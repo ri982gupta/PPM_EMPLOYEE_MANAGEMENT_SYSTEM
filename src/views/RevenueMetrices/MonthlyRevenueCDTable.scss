@@ -1,0 +1,145 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.revenueCDTable {
+  font-size: $tableFont;
+
+  th,
+  td {
+    min-width: 120px;
+    max-width: 120px;
+    text-align: right;
+    padding: 0px 0px 0px 0px;
+  }
+  th {
+    background-color: #8080802b;
+    &:first-of-type {
+      min-width: 250px;
+      max-width: 250px;
+      position: sticky;
+      left: 0;
+      z-index: 3;
+      padding: 10px 55px;
+      background-color: #f4f4f4;
+      border-bottom: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      margin-bottom: -23.5px;
+      height: 47px;
+      color: #241212;
+    }
+  }
+  td,
+  &:first-of-type {
+    background-color: #d4e7fb;
+
+    &:first-of-type {
+      min-width: 250px;
+      max-width: 250px;
+      position: sticky;
+      left: 0;
+      z-index: 3;
+    }
+  }
+  .MuiTableRow-root:hover td {
+    background-color: none !important;
+  }
+  .MuiTableCell-root td {
+    display: block;
+  }
+  .MuiTableRow-root td {
+    display: block;
+  }
+  tbody {
+    tr {
+      &:nth-of-type(1) {
+        td {
+          background-color: #8080802b !important;
+          font-weight: bold;
+          padding-right: 46px;
+        }
+      }
+      &:nth-of-type(2) {
+        td {
+          background-color: #b3bdc7 !important;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  & > div {
+    box-shadow: 0 0 0;
+  }
+
+  .expandIcon {
+    padding: 5px;
+    height: 16px;
+    width: 16px;
+    float: right;
+    padding-left: 39px;
+  }
+}
+
+.dispStyle {
+  // background-color: #241212 !important;
+  color: red;
+}
+.dispGreen {
+  color: green;
+}
+td:first-child {
+  text-align: left;
+}
+td:nth-child(2) {
+  text-align: right;
+  color: #241212;
+}
+tbody {
+  tr,
+  tr {
+    td {
+      // min-width: 90px !important;
+      // &:nth-of-type(1),
+      // &:nth-of-type(2) {
+      //   background-color: #d4e7fb;
+      // }
+
+      &:has(.delta) {
+        background-color: #d8eaea;
+        text-align: right !important;
+      }
+
+      &:has(.plRev) {
+        background-color: #f5e5e5;
+        text-align: right !important;
+      }
+    }
+  }
+  .bodyStyle {
+    float: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-width: 10px;
+    max-width: 112px;
+    position: sticky;
+    left: 5px;
+    z-index: 3;
+  }
+
+  .headStyle {
+    background-color: red;
+    margin-left: 18px;
+    padding-left: 50px;
+  }
+}
+.ellipsisCDTable {
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+
+// .css-ywqkdx-MuiTableContainer-root {
+//   overflow-x: scroll;
+// }

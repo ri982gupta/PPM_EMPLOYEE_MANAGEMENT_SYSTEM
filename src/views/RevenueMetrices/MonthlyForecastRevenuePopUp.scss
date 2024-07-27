@@ -1,0 +1,4 @@
+.modal-backdrop.fade.show
+  + .p-dropdown-panel.p-component.p-connected-overlay-enter-done {
+  z-index: 1055 !important;
+}

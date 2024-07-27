@@ -1,0 +1,99 @@
+/*------------------------For Resource Request Table-------------------------------------*/
+.Resource-Request-Editable-Table {
+  table {
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 3 !important;
+    }
+    tbody {
+      tr {
+        td {
+          input {
+            width: 85%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+        .duplicate-row {
+          background-color: #ffc0cb63 !important;
+          // #ffc0cb63 !important;
+        }
+        &.p-datatable-emptymessage {
+          td {
+            max-width: 98.2vw;
+            min-width: 96.89vw;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.Resource-Request-Editable-Table .sc-gswNZR {
+  position: absolute !important;
+  margin-top: 25px !important;
+}
+
+/*----------------------------END-------------------------------------------------------*/
+
+.error-block.autoComplete-container .wrapper {
+  border: 1px solid #e41b1b !important;
+  background-color: #f0bdbc !important;
+}
+
+// .error-block {
+//   // border: 1px solid #e41b1b !important;
+//   // background-color: #f0bdbc !important;
+// }
+
+// for resource request screen legend
+
+.legend-execel-and-search-btn {
+  justify-content: space-between !important;
+  .legend-text {
+    font-size: 13px;
+    font-weight: 100 !important;
+  }
+  .execel-and-search-btn {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+}
+.legend-purple {
+  background-color: #800080;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.fullfillments-ResourceRequest-view {
+  .p-datatable-wrapper {
+    overflow: auto;
+    max-height: var(--dynamic-value);
+    table {
+      border-collapse: separate;
+      thead {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+.fullfillments-ResourceRequest-edit {
+  .p-datatable-wrapper {
+    overflow: auto;
+    max-height: var(--dynamic-value1);
+    table {
+      border-collapse: separate;
+      thead {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      }
+    }
+  }
+}

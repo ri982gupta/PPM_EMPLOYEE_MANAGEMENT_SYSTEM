@@ -1,0 +1,20 @@
+
+// Use the CSS variable in your SCSS file
+
+
+.generate-billing-timesheet-table{
+  .p-datatable-responsive-scroll > .p-datatable-wrapper {
+    max-height: var(--dynamic-value);
+    // Other styles...
+  }
+  table{
+    thead{
+      
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      
+    }
+  }
+}
+  

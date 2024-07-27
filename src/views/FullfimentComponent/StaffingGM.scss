@@ -1,0 +1,14 @@
+.fullfilmentSubKConvertionTrend{
+    .p-datatable-wrapper{
+        overflow: auto;
+        max-height: var(--dynamic-value) !important;
+        table{
+          border-collapse: separate;
+          thead{
+              position: sticky;
+              top: 0;
+              z-index: 2;
+          }
+      }
+    }
+}

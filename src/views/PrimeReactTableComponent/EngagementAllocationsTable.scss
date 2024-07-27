@@ -1,0 +1,159 @@
+@import "../../scss/variables";
+
+.engagementAllocationsTable {
+  font-size: 13px;
+  & > div {
+    width: fit-content;
+    justify-content: center;
+    max-width: 100%;
+  }
+  tr {
+    &:nth-of-type(1) {
+      th:has(.mixer) {
+        border-bottom: 0;
+        margin-bottom: -25px;
+        padding-top: 12px;
+        z-index: 2;
+      }
+
+      th:nth-of-type(1) {
+        z-index: 3;
+      }
+      th:nth-of-type(2) {
+        z-index: 3;
+      }
+
+      th {
+        vertical-align: middle;
+      }
+    }
+
+    &:nth-of-type(2) {
+      th:nth-of-type(1) {
+        z-index: 1;
+      }
+
+      th:has(.mixer) {
+        border-top: 0;
+      }
+    }
+
+    th,
+    td {
+      &:nth-of-type(1) {
+        position: sticky;
+        left: 0;
+        max-width: 77px;
+        min-width: 77px;
+        padding-right: 10px;
+        border-color: rgb(178, 165, 165);
+      }
+      &:nth-of-type(2) {
+        position: sticky;
+        left: 77px;
+        max-width: 490px;
+        min-width: 490px;
+      }
+      &:has(.projManager) {
+        max-width: 100px;
+        min-width: 100px;
+        white-space: "nowrap";
+        overflow: "hidden";
+        text-overflow: "ellipsis";
+      }
+      &:has(.date) {
+        max-width: 100px;
+        min-width: 100px;
+        text-align: center;
+      }
+      &:nth-last-of-type(1) {
+        min-width: 77px;
+      }
+      &:has(.odd) {
+        background-color: #c5e8e8;
+        text-align: right;
+        & ~ *:nth-of-type(odd) {
+          background-color: #c5e8e8;
+          text-align: right;
+        }
+        & ~ *:nth-of-type(even) {
+          background-color: #facbcb;
+          text-align: right;
+        }
+        & ~ *:has(.total) {
+          background-color: #f2f29f;
+          text-align: right;
+        }
+      }
+    }
+    th:last-of-type {
+      text-align: center;
+      div {
+        display: table;
+        text-align: center;
+        width: 100%;
+      }
+    }
+    &:has(.rescolor) {
+      td {
+        background-color: white;
+        &:has(.odd) {
+          background-color: lighten(#c5e8e8, 8%);
+          text-align: right;
+          & ~ *:nth-of-type(odd) {
+            background-color: lighten(#c5e8e8, 8%);
+            text-align: right;
+          }
+          & ~ *:nth-of-type(even) {
+            background-color: lighten(#facbcb, 8%);
+            text-align: right;
+          }
+          & ~ *:has(.total) {
+            background-color: lighten(#f2f29f, 15%);
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  .expandIcon {
+    padding: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  thead {
+    tr {
+      th:first-of-type {
+        border-left: 1px solid #ccc;
+      }
+
+      th:nth-of-type(2) {
+        & > div {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  tbody {
+    td {
+      font-weight: 500;
+      text-align: left;
+      // font-weight: bold;
+      background-color: #d4e7fb;
+      border-color: rgb(178, 165, 165);
+    }
+    tr:first-of-type {
+      td {
+        font-weight: 700;
+        background-color: #f5d5a7 !important;
+        [aria-label="Expand"] {
+          display: none;
+        }
+      }
+    }
+  }
+}

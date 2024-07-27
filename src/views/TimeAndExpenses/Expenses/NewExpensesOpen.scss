@@ -1,0 +1,12 @@
+@import "../../../scss/variables";
+.openTable {
+  a {
+    color: $accent !important;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

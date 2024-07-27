@@ -1,0 +1,68 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.VendorPerformance {
+  font-size: 13px;
+
+  & > div {
+    box-shadow: 0 0 0;
+    border-left-color: $lightGray;
+  }
+  table {
+    tr {
+      td {
+        &:has(.odd) {
+          background-color: #f5e5e5;
+          justify-content: flex-end;
+        }
+
+        &:has(.even) {
+          background-color: #d8eaea;
+          justify-content: flex-end;
+        }
+
+        &:has(.total) {
+          background-color: #ffffe6;
+          justify-content: flex-end;
+        }
+
+        &:has(.name) {
+          background-color: #d4e7fb;
+          // justify-content: flex-end;
+        }
+
+        // &:has(.sm) {
+        //     min-width: 50px;
+        //     max-width: 50px;
+        //     width: 50px;
+        // }
+      }
+    }
+  }
+}
+
+.resourceAllocationTable {
+  & > .darkHeader {
+    @include mixer(49);
+  }
+}
+.vendorperformanceDatepicker .react-datepicker-popper {
+  z-index: 10 !important;
+}
+
+// .VendorPerformanceTop {
+//   .MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-dense:has(.MuiTablePagination-toolbar) {
+//     min-height: 35px;
+//   }
+//   .MuiTablePagination-toolbar {
+//     min-height: 30px;
+//     height: 30px;
+//   }
+// }
+
+//page height was getting more than 100bvh
+.vendor-VMG-search-table {
+  .mb-3 {
+    margin-bottom: 0px !important;
+  }
+}

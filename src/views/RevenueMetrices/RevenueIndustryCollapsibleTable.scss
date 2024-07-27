@@ -1,0 +1,157 @@
+@import "../../scss/mixins";
+
+.RevByIndustryTable {
+  tr {
+    &:nth-of-type(1) {
+      th:nth-of-type(1) {
+        z-index: 3;
+      }
+      th:nth-of-type(2) {
+        position: sticky !important;
+        left: 60px;
+        z-index: 4;
+        border-bottom: 0;
+      }
+      @include mixer(73);
+    }
+    &:nth-of-type(2) {
+      th {
+        div {
+          justify-content: center;
+        }
+        &:nth-of-type(1) {
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  thead {
+    tr {
+      th:first-of-type {
+        border-left: 1px solid #ccc;
+      }
+    }
+    // [data-testid="ArrowDownwardIcon"] {
+    //   display: none;
+    // }
+    tr:last-child {
+      th {
+        background-color: rgb(156 164 173) !important;
+        & > div {
+          justify-content: flex-end !important;
+        }
+        &:nth-of-type(2) {
+          & > div {
+            justify-content: flex-start !important;
+          }
+        }
+        div {
+          & > div {
+            cursor: default !important;
+            color: black !important;
+            // font-size: 13px;
+            font-weight: 700;
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  tbody {
+    // tr:first-of-type {
+    //   td {
+    //     background-color: #f5d5a7;
+    //   }
+    // }
+    tr {
+      td {
+        background-color: #d4e7fb;
+        // pointer-events: none;
+
+        div {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          img + span {
+            margin-top: 3px;
+            font-size: 12px;
+          }
+        }
+        &:has(.ParentExpandedTxt) {
+          justify-content: flex-end;
+          text-align: right;
+        }
+      }
+
+      &:has(.ChildExpandedTxt) {
+        td {
+          &:nth-of-type(1),
+          &:nth-of-type(2) {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+
+    $total-columns: 100;
+    $columns-per-group: 4;
+    $group-colors: (#f5e5e5, #d8eaea);
+    $pattern-start: 3;
+
+    @for $group from 1 through ceil($total-columns / $columns-per-group) {
+      $color: nth($group-colors, ($group % length($group-colors)) + 1);
+      $start-column: ($group - 1) * $columns-per-group + $pattern-start;
+      $end-column: min(
+        $group * $columns-per-group + $pattern-start - 1,
+        $total-columns
+      );
+      @for $column from $start-column through $end-column {
+        td:nth-of-type(#{$column}) {
+          background-color: $color;
+        }
+      }
+    }
+
+    td {
+      &:nth-last-of-type(1),
+      &:nth-last-of-type(2),
+      &:nth-last-of-type(3),
+      &:nth-last-of-type(4) {
+        background-color: #ffffe6;
+      }
+    }
+  }
+}
+.RevByIndustryFonts {
+  // font-size: 13px;
+  font-weight: 700;
+  color: black;
+}
+
+// tbody {
+// tr {
+// &:hover {
+//   td {
+//     &:nth-of-type(1),
+//     &:nth-of-type(2) {
+//       background-color: #d4e7fb !important;
+//     }
+//   }
+// }
+// &:nth-of-type(1):hover {
+//   td {
+//     &:nth-of-type(1),
+//     &:nth-of-type(2) {
+//       background-color: #f5d5a7 !important;
+//     }
+//   }
+// }
+// }
+// }
+.MuiTableContainer-root {
+  max-height: 75vh !important;
+}

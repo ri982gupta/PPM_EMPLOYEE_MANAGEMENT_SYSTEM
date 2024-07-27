@@ -1,0 +1,83 @@
+{
+    "softClosed": {
+        "data": [
+            {
+                "id": -1,
+                "opportunity": "Opportunity",
+                "customer": "__iconCust__ Customer __iconProsp__ Prospect",
+                "isProspect": 0,
+                "country": "Country",
+                "closeDate": "Close Date",
+                "amount": "Amount ($)",
+                "probability": "Prob %",
+                "grossMargin": "GM %"
+            },
+            {
+                "id": 29888,
+                "opportunity": "SWOne - Otter SPSS 2022 renewal",
+                "customer": "Otter Products",
+                "isProspect": 1,
+                "country": "US",
+                "closeDate": "23-Mar-22",
+                "amount": "48.18",
+                "probability": "100",
+                "grossMargin": "0.00"
+            },
+            {
+                "id": 36327,
+                "opportunity": "SWone - Safran Cabin Engineering Requirements 2021 renewal",
+                "customer": "Safran Cabin",
+                "isProspect": 1,
+                "country": "US",
+                "closeDate": "02-Mar-22",
+                "amount": "66.00",
+                "probability": "100",
+                "grossMargin": "0.00"
+            },
+            {
+                "id": 38601,
+                "opportunity": "SWOne - SAP LABS - Aspera Ent 500 x 4",
+                "customer": "SoftwareOne obo SAP LABS INC",
+                "isProspect": 1,
+                "country": "US",
+                "closeDate": "02-Mar-22",
+                "amount": "5414.00",
+                "probability": "100",
+                "grossMargin": "0.00"
+            },
+            {
+                "id": 36472,
+                "opportunity": "SWOne - TradeStation Group - Sterling Connect Direct Renewal 2022",
+                "customer": "TradeStation Group",
+                "isProspect": 1,
+                "country": "US",
+                "closeDate": "23-Mar-22",
+                "amount": "63.50",
+                "probability": "100",
+                "grossMargin": "0.00"
+            },
+            {
+                "id": 36960,
+                "opportunity": "SWOne obo Endurance Services/Sompo Guardium  Renewal   2022",
+                "customer": "Endurance Services/Sompo",
+                "isProspect": 1,
+                "country": "US",
+                "closeDate": "23-Mar-22",
+                "amount": "40.78",
+                "probability": "100",
+                "grossMargin": "0.00"
+            },
+            {
+                "id": 37124,
+                "opportunity": "SWOne obo Neovia Renewal 2022 for TXSeries renewal",
+                "customer": "Neovia",
+                "isProspect": 1,
+                "country": "US",
+                "closeDate": "01-Mar-22",
+                "amount": "2650.00",
+                "probability": "100",
+                "grossMargin": "0.00"
+            }
+        ]
+    }
+}

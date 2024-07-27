@@ -1,0 +1,331 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+tr:has(.Summary) {
+  td {
+    background-color: $tableSummaryGray !important;
+    font-weight: bold;
+  }
+}
+
+.nameStyle {
+  padding-left: 10px;
+}
+.commentData {
+  color: orange;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-top: -2px;
+  font-size: 17px;
+}
+
+.darkHeader1 {
+  td {
+    background-color: #d4e7fb !important;
+  }
+}
+.stickyHeader {
+  position: sticky;
+  top: 0;
+}
+input[type="checkbox"] {
+  accent-color: $primary2;
+  margin-left: 3px;
+  cursor: pointer;
+  &.disabledCheckbox {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+.dhDocIcon {
+  color: $accent;
+  margin-top: -2px;
+}
+
+.opportunityTable {
+  table {
+    border-collapse: separate;
+  }
+
+  tr {
+    th {
+      background-color: rgb(236, 235, 235);
+      z-index: 2;
+      position: sticky;
+      top: 0;
+      vertical-align: middle;
+      text-align: center;
+    }
+    td {
+      background-color: $white;
+      &:first-of-type {
+        font-weight: 600;
+      }
+      & > div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        * {
+          max-width: 150px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+      &:has(.expandedRow) {
+        padding-left: 30px !important;
+        div {
+          width: 100%;
+          span {
+            width: 100%;
+            max-width: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2px;
+            a {
+              max-width: 85%;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+            i {
+              margin-left: auto;
+            }
+          }
+        }
+      }
+    }
+    .amt {
+      font-weight: 600;
+      margin-left: auto;
+    }
+    &:has(.expandedRow) {
+      td {
+        &:first-of-type {
+          max-width: 200px;
+          font-weight: 400;
+        }
+        .amt {
+          font-weight: 400;
+          margin-left: auto;
+        }
+      }
+    }
+
+    .even {
+      background-color: #facbcb;
+      div {
+        justify-content: flex-end;
+        width: 100%;
+      }
+    }
+
+    .odd {
+      background-color: #75f2f2;
+      div {
+        justify-content: flex-end;
+        width: 100%;
+      }
+    }
+
+    .total {
+      background-color: #f2f29f;
+      div {
+        justify-content: flex-end;
+        width: 100%;
+      }
+    }
+
+    .innerodd {
+      background-color: #d8eaea;
+      div {
+        justify-content: flex-end;
+        width: 100%;
+      }
+    }
+
+    .innereven {
+      background-color: #f5e5e5;
+      div {
+        justify-content: flex-end;
+        width: 100%;
+      }
+    }
+
+    .bgColor {
+      background-color: #d4e7fb !important;
+    }
+
+    .amount {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.opportunityExecTable {
+  max-height: 40vh;
+  overflow: auto;
+  table {
+    border-collapse: separate;
+  }
+  tr {
+    &:first-of-type {
+      top: 0;
+      z-index: 5;
+    }
+    &:has(.expandedRow) {
+      td {
+        &:first-child {
+          span {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+    th {
+      width: fit-content;
+      vertical-align: middle;
+      white-space: nowrap;
+      text-align: center;
+    }
+  }
+  th,
+  td {
+    &:nth-of-type(1) {
+      max-width: 200px;
+      min-width: 200px;
+      position: sticky;
+      left: 0;
+      z-index: 3;
+    }
+    &.customer {
+      max-width: 180px;
+      min-width: 180px;
+      position: sticky;
+      left: 200px;
+      z-index: 3;
+    }
+    &.opportunity {
+      max-width: 160px;
+      min-width: 160px;
+      position: sticky;
+      left: 380px;
+      z-index: 3;
+    }
+  }
+  th {
+    &:nth-of-type(1),
+    &.customer,
+    &.opportunity {
+      z-index: 6;
+    }
+  }
+  td {
+    &:nth-of-type(1),
+    &.customer,
+    &.opportunity {
+      background-color: $white;
+    }
+    &.opportunity {
+      border-right: 1px solid #ddd;
+      div {
+        width: 100%;
+        justify-content: space-between;
+        a {
+          max-width: calc(100% - 20px);
+        }
+      }
+    }
+  }
+  .customer-sticky {
+    position: sticky;
+    left: 200px;
+    z-index: 2;
+  }
+  .opper-sticky {
+    position: sticky;
+    left: 380px;
+    z-index: 2;
+    border-right: 1px solid #ddd;
+  }
+}
+
+.opportunityTable {
+  border-collapse: separate;
+  tr {
+    &:has(.nameStyle) {
+      .nameStyle {
+        padding-left: 25px !important;
+        font-weight: 100 !important;
+      }
+    }
+
+    &:has(.Opportunity) {
+      .Opportunity {
+        font-weight: 100;
+        padding-left: 25px !important;
+      }
+    }
+    &:has(.Hours) {
+      .Hours {
+        font-weight: 100;
+        padding-left: 25px !important;
+      }
+    }
+
+    &:has(.Average) {
+      .Average {
+        font-weight: 100;
+        padding-left: 25px !important;
+      }
+    }
+    td {
+      border-bottom: 1px solid #ccc;
+      border-right: 1px solid #ccc !important;
+      &:nth-of-type(n + 2) {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.darkHeader:not(.toHead) .opportunityTable tbody tr:has(.Summary) td {
+  background-color: $tableSummaryGray !important;
+  position: sticky;
+  top: 46.45px;
+  z-index: 2;
+}
+
+.totalStyle {
+  background-color: #f2f29f !important;
+}
+
+.innertotalStyle {
+  background-color: #f6f6be !important;
+}
+
+.evenColor {
+  background-color: #facbcb !important;
+}
+
+.oddColor {
+  background-color: #75f2f2 !important;
+}
+
+.inneroddColor {
+  background-color: #bbf9f9 !important;
+}
+
+.innerevenColor {
+  background-color: #f5e5e5 !important;
+}
+
+.alignRight {
+  float: right;
+}
+
+.lvl1Name {
+  background-color: #d4e7fb !important;
+}

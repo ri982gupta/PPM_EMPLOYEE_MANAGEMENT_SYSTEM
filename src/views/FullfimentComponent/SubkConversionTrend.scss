@@ -1,0 +1,18 @@
+@import "../../scss/variables";
+
+.SubkTable {
+  width: 100%;
+  overflow: auto;
+  max-height: 300px;
+  // overflow-y: scroll;
+  table {
+    tr {
+      &:nth-of-type(2) {
+        td {
+          background-color: $tableSummaryGray !important;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

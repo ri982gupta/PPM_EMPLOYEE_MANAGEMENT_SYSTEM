@@ -1,0 +1,103 @@
+@import "../../scss/variables";
+
+.button-pointer {
+  cursor: pointer;
+}
+
+/* Add this CSS class to change the background color on hover */
+.employee-element:hover {
+  background-color: #39f;
+  border-radius: 4px;
+  color:white
+}
+
+/* Define custom scrollbar styles */
+.scroll-container {
+  overflow-y: auto; /* Add vertical scroll if content overflows */
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent; /* Set scrollbar colors */
+
+  /* Track styles */
+  &::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+  }
+
+  /* Handle styles */
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Set the color of the scrollbar handle */
+    border-radius: 4px; /* Set the border-radius for a rounded handle */
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #999; /* Change the handle color on hover */
+  }
+
+  /* Track on hover */
+  &::-webkit-scrollbar-track:hover {
+    background-color: transparent; /* Change the track color on hover */
+  }
+}
+
+/* Define custom scrollbar styles for Direct Sales Executives container */
+.directse {
+  max-height: 651px; /* Set the desired max height for the container */
+}
+
+/* Define custom scrollbar styles for Indirect Sales Executives container */
+.indirectse {
+  max-height: 405px; /* Set the desired max height for the container */
+}
+
+/* Define custom scrollbar styles for Virtual Team container */
+.virtualteam {
+  max-height: 202px; /* Set the desired max height for the container */
+}
+
+
+
+
+.Scroll {
+  max-height: 250px;
+  overflow-y: auto;
+}
+.optionList {
+  border-width: 0;
+  &:last-of-type {
+    border-bottom-width: 0;
+  }
+
+  .virualTeamRender {
+    border-width: 0;
+    margin: 0 !important;
+    background: lighten($lightGray, 10%);
+    border-radius: 0;
+    margin: 5px 0 !important;
+    width: 680px;
+  }
+}
+
+.pr0 {
+  padding-right: 0 !important;
+}
+
+.selectSEbtnContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0px;
+  input[type="text"],
+  select {
+    max-width: 150px;
+  }
+}
+.selectSEformBtns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  .btnSE {
+    padding: 0 10px;
+    border-radius: 5px;
+  }
+}
+

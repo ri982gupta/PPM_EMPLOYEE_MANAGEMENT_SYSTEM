@@ -1,0 +1,48 @@
+@import "../../scss/variables";
+
+.projectStakeholderTable {
+  display: flex;
+  flex-direction: column;
+  table {
+    border-collapse: separate;
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .p-row-editor-init {
+      &:hover {
+        background: none !important;
+      }
+      .p-row-editor-init-icon {
+        color: $orange;
+      }
+      &.disableRow {
+        cursor: not-allowed !important;
+        pointer-events: none;
+        span {
+          color: lighten($black, 60%);
+        }
+      }
+    }
+  }
+  .p-datatable-emptymessage {
+    td {
+      flex: 1;
+      max-width: none !important;
+      text-align: center !important;
+    }
+  }
+  // .p-paginator {
+  //   display: none !important;
+  // }
+}
+.stakeTableSearch {
+  float: right;
+}
+.projectStakeHolders {
+  .p-datatable-responsive-scroll > .p-datatable-wrapper {
+    overflow: auto;
+    max-height: var(--dynamic-value) !important;
+  }
+}

@@ -1,0 +1,144 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.billableUtilTrendTable {
+  font-size: $tableFont;
+
+  table {
+    border-collapse: separate;
+    @include mixer(49);
+
+    tr {
+      th,
+      td {
+        &:nth-of-type(1) {
+          position: sticky;
+          left: 0;
+          min-width: 150px;
+          max-width: 150px;
+        }
+        &:has(.cader) {
+          min-width: 80px;
+          max-width: 80px;
+          div {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    thead {
+      opacity: 1;
+      tr {
+        &:first-of-type {
+          th {
+            line-height: 1.2;
+            vertical-align: middle;
+            &:first-of-type {
+              z-index: 2;
+            }
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          &:nth-last-of-type(1),
+          &:nth-last-of-type(2),
+          &:nth-last-of-type(3),
+          &:nth-last-of-type(4),
+          &:nth-last-of-type(5) {
+            div {
+              width: 100%;
+              text-align: right;
+            }
+          }
+          div {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+          &:has(.doj) {
+            div {
+              width: 100%;
+            }
+          }
+        }
+      }
+      td:has(.ytdColor.ytd) {
+        background-color: #d8eaea !important;
+        text-align: right;
+      }
+      td:has(.QuarterColor.quarter) {
+        background-color: #f5e5e5 !important;
+        text-align: right;
+      }
+      // td:has(.Q1Color.quarter1) {
+      //   background-color: yellow !important;
+      //   text-align: right;
+      // }
+      // td:has(.Q2Color.quarter2) {
+      //   background-color: orange !important;
+      //   text-align: right;
+      // }
+      // td:has(.qtdColor.qtd) {
+      //   background-color: blue !important;
+      //   text-align: right;
+      // }
+      // td:has(.nxt30daysColor.nxt30days) {
+      //   background-color: black !important;
+      //   text-align: right;
+      // }
+      // td:has(.nxt60daysColor.nxt60days) {
+      //   background-color: gray !important;
+      //   text-align: right;
+      // }
+      // td:has(.averagedaysColor.average) {
+      //   background-color: gold !important;
+      //   text-align: right;
+      // }
+
+      td:has(.revenueInd.green) {
+        background-color: #d8eaea !important;
+        justify-content: end;
+      }
+      td:has(.revenueInd.red) {
+        background-color: #f5e5e5 !important;
+      }
+    }
+  }
+}
+.billableUtilTrendTable.darkHeader:not(.toHead) tbody tr:first-of-type {
+  td {
+    background-color: $tableSummaryGray !important;
+  }
+}
+
+/*-----------------------------Kaif's code------------*/
+
+.billableUtilTrendTable.darkHeader {
+  table {
+    tbody {
+      tr {
+        td {
+          &:has(.numData) {
+            text-align: right !important;
+            justify-content: end;
+          }
+          &:has(.revenueInd.red) {
+            text-align: right !important;
+            justify-content: end !important;
+          }
+          &:nth-of-type(1) {
+            span {
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/*-----------END-----------------------------------*/

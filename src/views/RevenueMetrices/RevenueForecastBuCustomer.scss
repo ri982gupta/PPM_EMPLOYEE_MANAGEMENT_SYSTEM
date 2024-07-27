@@ -1,0 +1,205 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.revenueForecastBuCustomer {
+  font-size: $tableFont;
+  &:not(.toHead) {
+    tbody {
+      tr {
+        &:nth-of-type(odd) {
+          td {
+            background-color: $white !important;
+            border-top: 0;
+            border-bottom: 0;
+          }
+        }
+        &:has(.odd) {
+          td {
+            background-color: #eef2f5 !important;
+            border-top: 1px solid rgba($black, 0.1);
+            border-bottom: 1px solid rgba($black, 0.1);
+          }
+        }
+      }
+    }
+  }
+  & > div {
+    box-shadow: 0 0 0;
+  }
+  table {
+    // rowspan mixin for Material React Table
+    @include mixer(42);
+  }
+  tr {
+    border-left: 1px solid $lightGray;
+    &:nth-of-type(1) {
+      th:nth-of-type(1) {
+        z-index: 3;
+      }
+    }
+
+    &:nth-of-type(2) {
+      th:nth-of-type(1) {
+        z-index: 1;
+      }
+
+      th:has(.mixer) {
+        border-top: 0;
+      }
+    }
+    &:has(.lvl-1) {
+      td {
+        &:nth-of-type(1) {
+          button {
+            margin-left: 5px;
+            width: 15px;
+            padding: 0;
+            border-radius: 0;
+          }
+        }
+        &:nth-of-type(2) {
+          padding-left: 5px !important;
+        }
+      }
+    }
+    &:has(.lvl-2) {
+      td {
+        &:nth-of-type(1) {
+          button {
+            margin-left: 20px;
+            width: 15px;
+            padding: 0;
+            border-radius: 0;
+          }
+        }
+        &:nth-of-type(2) {
+          padding-left: 15px !important;
+        }
+      }
+    }
+    &:has(.lvl-3) {
+      td {
+        &:nth-of-type(1) {
+          button {
+            margin-left: 25px;
+            width: 15px;
+            padding: 0;
+            border-radius: 0;
+          }
+        }
+        &:nth-of-type(2) {
+          padding-left: 25px !important;
+        }
+      }
+    }
+    th,
+    td {
+      &:nth-of-type(1) {
+        position: sticky;
+        z-index: 3;
+        left: 0;
+        min-width: 60px;
+        max-width: 60px;
+      }
+
+      &:nth-of-type(2) {
+        min-width: 200px;
+        position: sticky !important;
+        z-index: 3;
+        left: 60px;
+      }
+    }
+
+    th {
+      vertical-align: middle;
+    }
+  }
+
+  table {
+    // display: inline !important;
+    margin-right: 0 !important;
+    min-width: 100%;
+  }
+
+  .expandIcon {
+    padding: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  thead {
+    tr {
+      height: 25px;
+      &:first-of-type {
+        th {
+          height: 25px;
+        }
+      }
+      // &:nth-of-type(2) {
+      th {
+        & > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          text-align: center;
+          line-height: 1.2;
+        }
+      }
+      // }
+      th:first-of-type {
+        border-left: 1px solid #ccc;
+      }
+
+      th:nth-of-type(2) {
+        & > div {
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      &:has(.hExpandedTxt) {
+        background-color: $white;
+      }
+
+      td {
+        // min-width: 100px;
+        // max-width: 100px;
+        div {
+          // display: flex;
+          align-items: right;
+          gap: 5px;
+          // width: 100%;
+          img + span {
+            margin-top: 3px;
+            font-size: 12px;
+          }
+        }
+        & > span {
+          width: 100%;
+          &:nth-of-type(2) {
+            text-align: left;
+          }
+        }
+      }
+
+      td:first-of-type {
+        border-left: 1px solid #ccc;
+
+        button {
+          height: 22px;
+          width: 22px;
+          padding: 0;
+
+          svg {
+            height: 22px;
+          }
+        }
+      }
+    }
+  }
+}

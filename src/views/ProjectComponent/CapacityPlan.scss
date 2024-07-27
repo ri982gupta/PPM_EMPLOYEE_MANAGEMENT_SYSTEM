@@ -1,0 +1,253 @@
+@import "../../scss/variables";
+
+.capacityPlanTable {
+  .p-datatable .p-datatable-tbody>tr>td .p-row-toggler {
+    height: 18px;
+    width: 18px;
+
+    .pi {
+      font-size: $smallFont;
+    }
+  }
+
+  .ellipsis {
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+    font-size: $smallFont;
+  }
+
+  .btn {
+    display: flex;
+    gap: 0px;
+    align-items: center;
+    height: 24px;
+
+    &.btn-primary {
+      background: $accent;
+      border-color: $accent;
+    }
+  }
+
+  .btn-container-events {
+    &.center {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  .innercapacityPlanTable {
+    thead {
+      display: none;
+    }
+
+    tbody {
+      border-top: 1px solid #dee2e6;
+    }
+  }
+
+  .tableBottomButtons {
+    display: flex;
+    gap: 10px;
+    padding: 3px;
+  }
+
+  td:has(.innerTable) {
+    padding: 0 !important;
+  }
+
+  table {
+    // border-collapse: separate;
+    width: 100% !important;
+
+    &>thead,
+    tbody {
+      &>tr {
+        width: 100% !important;
+        display: flex;
+
+        &>th {
+          border-left: 0 !important;
+          border-top: 0 !important;
+
+          &:first-of-type {
+            border-left: 1px solid #ccc !important;
+            max-width: 40px !important;
+          }
+
+          &:nth-of-type(2) {
+            flex: 0 0 140px !important;
+          }
+
+          &:nth-of-type(3) {
+            flex: 0 0 30px !important;
+          }
+
+          &:nth-last-of-type(2) {
+            border-right-width: 0 !important;
+            flex: 0 0 90px;
+            margin-right: -40px;
+            z-index: 0;
+          }
+        }
+
+        &>th,
+        &>td {
+          flex: 1;
+          max-width: unset !important;
+
+          &>div {
+            white-space: normal !important;
+            overflow: auto;
+            text-overflow: unset;
+          }
+        }
+
+        &:not(.p-datatable-row-expansion) {
+          td {
+            &:nth-of-type(1) {
+              max-width: 40px !important;
+            }
+
+            &:nth-of-type(2) {
+              flex: 0 0 140px !important;
+            }
+
+            &:nth-of-type(3) {
+              flex: 0 0 30px !important;
+            }
+
+            &:nth-last-of-type(2) {
+              flex: 0 0 90px;
+              display: flex;
+              align-items: center;
+              // justify-content: flex-end;
+              margin-right: -40px;
+              z-index: auto;
+              border-right-width: 0 !important;
+
+              button {
+                width: auto !important;
+                height: auto !important;
+                border-radius: 0 !important;
+
+                &:focus {
+                  box-shadow: 0 0 0 0 !important;
+                }
+
+                &:hover {
+                  background: none !important;
+                }
+
+                span {
+                  color: $orange;
+                  font-size: 14px !important;
+                }
+              }
+            }
+
+            &:nth-last-of-type(1) {
+              border-left-width: 0 !important;
+              font-size: 16px !important;
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              svg:first-of-type{
+                margin-right: 20px;
+              }
+            }
+
+            &:only-child {
+              border-left-width: 1px !important;
+            }
+
+            &>div {
+              @extend .ellipsis;
+            }
+          }
+        }
+
+        &.p-datatable-emptymessage {
+          td:first-of-type {
+            max-width: none !important;
+          }
+        }
+      }
+
+      .colTotal {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .p-paginator{
+    align-items: baseline;
+  }
+}
+
+.innerTable {
+  table {
+    .p-datatable-tbody {
+      tr {
+        td {
+          background-color: lighten($lightGray, 10%);
+
+          &:nth-of-type(1) {
+            border-left: 0;
+          }
+
+          &:last-of-type(1) {
+            border-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.capacityPlanResTable .p-checkbox.p-component {
+  margin-left: 26%;
+}
+
+.capacityPlanResTable .p-datatable>.p-datatable-wrapper {
+  overflow: unset;
+}
+
+.capacityPlanAc {
+  input {
+    width: 200px !important;
+  }
+}
+
+.capacityPlanTableBottom {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+
+  &>div {
+    padding: 10px;
+
+    &:first-of-type {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #e6ecff;
+    }
+
+    &:last-of-type {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: #ffffe6;
+    }
+
+    strong {
+      margin-left: 10px;
+    }
+  }
+}
+.project-role-list-inner-table{
+  overflow:unset !important;
+}

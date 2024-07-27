@@ -1,0 +1,52 @@
+.Customer-Search-Table{
+    .p-datatable-wrapper{
+        max-height:var( --dynamic-value);
+        table{
+            border-collapse: separate;
+            thead{
+                position: sticky;
+                top: 0;
+                z-index: 2;
+            }
+        }
+    }
+}
+
+.customer-search-table-wrapper{
+margin-bottom: 0 !important;
+}
+
+
+.customer-legend-container-export-btn-wrapper{
+    justify-content: space-between;
+    .customer-search-legend-containers{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        .customer-search-grey-legend{
+            svg{
+                color: #808080; 
+            font-size: 13px; 
+            margin-top: -2px;
+            }
+            
+        }
+        .customer-search-green-legend{
+            svg{
+                color: #008000; 
+            font-size: 13px; 
+            margin-top: -2px;
+            }
+            
+        }
+        .customer-search-red-legend{
+            svg{
+                color: #ff0000; 
+            font-size: 13px; 
+            margin-top: -2px;
+            }
+            
+        }
+    }
+    
+}

@@ -1,0 +1,13 @@
+FROM docker.io/httpd:latest
+
+COPY ./httpd.conf /usr/local/apache2/conf/httpd.conf
+
+# Create a directory for the React app
+RUN mkdir -p /usr/local/apache2/htdocs/react-app
+RUN mkdir -p /tmp/ssl
+# Copy the build folder of your React app into the container
+COPY ./build /usr/local/apache2/htdocs/react-app
+COPY ./ssl/* /tmp/ssl
+#RUN a2enmod ssl 
+Expose 443 
+EXPOSE 80

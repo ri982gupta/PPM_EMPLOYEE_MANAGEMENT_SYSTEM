@@ -1,0 +1,553 @@
+@import "../scss/variables";
+
+body.dark-mode {
+  .darkModeBtn {
+    color: $orange;
+  }
+  .themeTitle {
+    color: $black !important;
+  }
+  .headerLogo {
+    filter: invert(1);
+  }
+  .loggedinUserDetails .loggedinUserTopSection:hover {
+    background-color: $darkBlue;
+    border-radius: 8px;
+  }
+  .pageTitle,
+  .attendanceTopSection {
+    border-bottom: 1px solid $darkModeBorder !important;
+    background-color: $pageTitleBg !important;
+  }
+  .header {
+    border-bottom: 1px solid $darkModeBorder !important;
+  }
+  .sidebar {
+    background-image: linear-gradient($darkBlue, $darkBlue) !important;
+    mix-blend-mode: darken;
+  }
+  .sidebar-brand {
+    background: $darkBlue;
+  }
+  ::-webkit-scrollbar-track {
+    background: $darkBlue;
+  }
+  .header,
+  .footer,
+  .pageContainer,
+  .body {
+    background-color: $darkBg;
+    color: $white;
+  }
+  .p-paginator {
+    background-color: $darkBlue;
+    color: $white;
+    border-color: $darkBlue !important;
+  }
+  .customCard {
+    background-color: $darkBlue;
+    background-color: $darkBg;
+    // salesPopup
+    // color: $white;
+
+    label {
+      color: $white;
+    }
+    .collapseHeader,
+    .collapseHeader + * {
+      border-bottom: 1px solid $darkModeBorder !important;
+      // border-color: rgba($darkBlue, 0) !important;
+      h2 {
+        background: none;
+      }
+    }
+    .revForcast {
+      color: $black;
+      label {
+        color: $black;
+      }
+    }
+  }
+  .globalSave,
+  .searchFilterHeading {
+    color: $white !important;
+  }
+  .darkHeader {
+    table {
+      border: 1px solid rgba($white, 0.2) !important;
+      // border-collapse: separate;
+    }
+    & > .MuiPaper-root {
+      background-color: $darkBg !important;
+      & > .MuiToolbar-root {
+        background-color: $darkModeBorder !important;
+        .MuiOutlinedInput-notchedOutline {
+          background-color: $white !important;
+          z-index: -1;
+        }
+      }
+    }
+    thead {
+      tr {
+        th {
+          background-color: $darkBlue !important;
+          border-color: rgba($white, 0.2) !important;
+          * {
+            color: $white !important;
+          }
+          & > div:has(.mixer) {
+            background-color: inherit !important;
+            border-top: 0 !important;
+          }
+        }
+      }
+    }
+    &:not(.toHead) {
+      tbody {
+        background: $darkBlue !important;
+        tr {
+          &:nth-of-type(odd) {
+            td {
+              background: $trOdd !important;
+              color: $white !important;
+              border-color: rgba($white, 0.2) !important;
+              border-right: 1px solid rgba($white, 0.2) !important;
+              border-left: 0 !important;
+            }
+          }
+          &:nth-of-type(even) {
+            td {
+              background: $trEven !important;
+              color: $white !important;
+              border-right: 1px solid rgba($white, 0.2) !important;
+              border-left: 0 !important;
+            }
+          }
+        }
+      }
+      tfoot {
+        tr {
+          border-color: rgba($white, 0.2) !important;
+          td {
+            background: $darkBlue !important;
+            color: $white !important;
+            border-color: rgba($white, 0.2) !important;
+            border-right: 1px solid rgba($white, 0.2) !important;
+            border-left: 0 !important;
+          }
+        }
+      }
+    }
+  }
+  .myDashboardTable.darkHeader {
+    table {
+      border: 0 !important;
+      tbody {
+        border: 0 !important;
+      }
+    }
+    & > div > div:has(.attendanceTopSection) {
+      background-color: $darkBlue !important;
+    }
+    tbody {
+      tr:last-of-type {
+        border-bottom: 0 !important;
+      }
+    }
+  }
+  .dashboardMessage.note {
+    color: $white;
+    background: $brown;
+  }
+  button {
+    color: $darkBlue;
+  }
+  input[type="text"],
+  select,
+  .rmsc .dropdown-heading,
+  input[type="number"] {
+    color: $black;
+  }
+  .breadcrumb-item.active {
+    color: rgba($white, 0.5);
+  }
+  .breadCrumbUI li .breadcrumbHomeIcon {
+    color: rgba($white, 0.5);
+  }
+  .header-toggler {
+    svg {
+      rect {
+        fill: $white;
+      }
+    }
+  }
+
+  .tabsContainer {
+    & > li {
+      span {
+        background: $darkBlue;
+        &::before {
+          border-top-color: rgba($white, 0.5);
+        }
+      }
+      ul {
+        margin-top: 3px;
+        box-shadow: 2px 2px 5px rgba($white, 0.2);
+        li {
+          color: $darkBlue;
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .RevByIndustryTable thead tr:last-child th div > div {
+    color: $white !important;
+  }
+
+  .rmsc .dropdown-content {
+    color: $black !important;
+    .select-panel .options label span {
+      color: $black !important;
+    }
+  }
+  // loader
+  .snowLoaderContent .overlayTimer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    z-index: 1;
+    color: $black;
+  }
+  // fixedpriceopen - label
+  .fixedPriceClassName {
+    label {
+      font-weight: 600;
+      color: $white;
+      display: flex;
+      align-items: center;
+    }
+  }
+  // legend text pyramid index
+  .legendContainer .legend .legendTxt {
+    font-size: 13px;
+    font-weight: 400;
+    color: $white;
+  }
+
+  .SalesPopup {
+    .customCard {
+      background-color: $darkBlue;
+      background-color: $darkBg;
+      // salesPopup
+      color: $white;
+    }
+  }
+  // sales popup-virtualteams
+  .optionList {
+    border-width: 0;
+    &:last-of-type {
+      border-bottom-width: 0;
+    }
+
+    .virualTeamRender {
+      border-width: 0;
+      margin: 0 !important;
+      background: lighten($lightGray, 10%);
+      border-radius: 0;
+      margin: 5px 0 !important;
+      width: 680px;
+      background-color: $darkBlue;
+    }
+  }
+  // projectOverview
+  .customCard .group-content {
+    padding: 10px;
+    background-color: $darkBg;
+  }
+  .grayBg {
+    background: $darkBlue !important;
+    padding: 15px;
+  }
+  .ProjectOverview label {
+    color: $white;
+  }
+  // T and M Open
+  .timesheetTable {
+    button,
+    label,
+    b,
+    strong {
+      color: $white;
+    }
+  }
+  // ExpenseOpen
+  &:not(.toHead) {
+    tbody {
+      tr {
+        &:last-of-type {
+          border-bottom: 1px solid rgba($white, 0.1);
+        }
+
+        td {
+          // background-color: #fff !important;
+          color: #000 !important;
+          border-top: 0;
+          border-bottom: 0;
+          height: 25px !important;
+          padding: 0 5px !important;
+
+          a {
+            color: #0090d2 !important;
+            text-decoration: underline !important;
+            transition: all 0.2 ease-in-out;
+
+            &:hover {
+              color: #0090d2 !important;
+              text-decoration: none !important;
+            }
+          }
+        }
+
+        &:nth-of-type(odd) {
+          td {
+            // background-color: #eef2f5 !important;
+            border-top: 1px solid rgba($black, 0.1);
+            border-bottom: 1px solid rgba($black, 0.1);
+          }
+
+          &:has(.summary) {
+            td {
+              background-color: $tableSummaryGray !important;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+  // LockTimesheet
+  .dataTables_filter {
+    label {
+      color: $white;
+    }
+  }
+
+  // TeamsProfileResAllocation
+  .ResAllocation {
+    label {
+      color: $white;
+    }
+  }
+  // StakeholderMapping - expand  Buttons globally
+  .MuiTableCell-root {
+    button {
+      color: $white;
+    }
+    .Mui-disabled {
+      color: rgba($white, 0.2) !important;
+    }
+  }
+  // RevenueByIndustry expand buttons
+  .RevByIndustryTable {
+    button {
+      color: $black;
+    }
+    .Mui-disabled {
+      color: rgba($black, 0.2) !important;
+    }
+  }
+  // RvenueMarginVariance - expand buttons
+  .RevenueVarianceTable {
+    button {
+      color: $black;
+    }
+    .Mui-disabled {
+      color: rgba($black, 0.2) !important;
+    }
+  }
+  // RevenueProjections- expand buttons
+  .RevenueProjections {
+    button {
+      color: $black;
+    }
+    .Mui-disabled {
+      color: rgba($black, 0.2) !important;
+    }
+  }
+  // scorecard
+  .serviceTable,
+  .csattable,
+  .custQbrList,
+  .targetTable {
+    color: $white;
+  }
+  // customer>open>overview>documents - card
+  // delivery>open>edit
+  .customCard {
+    // background-color: $darkBg;
+    border-radius: 8px;
+    // box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    margin: 0 0 15px !important;
+
+    .group-content {
+      padding: 10px;
+    }
+
+    h2 {
+      // background: $white;
+      // border-bottom: 1px solid $lightGray;
+      font-size: $pageFont;
+      padding: 10px 0;
+      border-radius: 8px 8px 0 0;
+      color: $accent;
+      letter-spacing: 0.5px;
+      font-weight: 500;
+    }
+  }
+  // Project Status Report
+  .projGlance {
+    label {
+      color: $white;
+    }
+  }
+  // engagementAlloc - no rec found
+  .MuiTypography-root {
+    color: $white;
+  }
+  // dropdownDelProject>edit
+  ul.ant-transfer-list-content,
+  .ant-transfer-list-header {
+    font-size: $smallFont;
+    color: $white;
+  }
+  // DelProject>edit headers
+  .displayPRJedit {
+    color: $white;
+  }
+  // hierarchy>date
+  .projHierarchy {
+    label {
+      color: $black !important;
+    }
+  }
+  // CapacityPlan
+  .CapPlan {
+    color: $black !important;
+  }
+  // TaskPlan
+  .taskPln {
+    color: $black;
+    background-color: $gray;
+  }
+  // vendorPerfor expand buttons
+  .VendorPerformanceTop {
+    button {
+      color: $black;
+    }
+    .Mui-disabled {
+      color: rgba($black, 0.2) !important;
+    }
+  }
+  // reports-
+  .reportsmainFile {
+    color: $black;
+  }
+  // reports Datepicker
+  .muidatepicker > * .MuiTextField-root {
+    min-width: 100% !important;
+    background-color: $white;
+  }
+  .MuiMonthCalendar-root {
+    right: 20px;
+    /* opacity: 1; */
+    position: relative;
+  }
+  // kaif css changes for report screens table colors
+  body.dark-mode
+    .reportsunderline
+    .darkHeader:not(.toHead)
+    tbody
+    tr:nth-of-type(odd)
+    td:has(.custom-column-class) {
+    background-color: #e9f7ff !important;
+    color: black !important;
+  }
+
+  body.dark-mode
+    .reportsunderline
+    .darkHeader:not(.toHead)
+    tbody
+    tr:nth-of-type(even)
+    td:has(.custom-column-class) {
+    background-color: #e9f7ff !important;
+    color: black !important;
+  }
+
+  .dark-mode .reportsunderline table {
+    thead {
+      tr {
+        th {
+          &:has(.p-column-header-content) {
+            border-bottom: 1px solid black !important;
+            border-right: 1px solid black !important;
+            border-top: 1px solid black !important;
+          }
+        }
+      }
+    }
+  }
+  // MyDashboard
+  .myDashboardProjTable {
+    .p-paginator-bottom {
+      button,
+      span {
+        height: auto;
+      }
+      span {
+        font-size: $tableFont;
+        color: $white;
+      }
+    }
+  }
+  // MyDashboard after you expand in table
+  .myDashboardTable table th:nth-of-type(5) .projStatus div,
+  .myDashboardTable table td:nth-of-type(5) .projStatus div {
+    font-size: 13px;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    color: $white;
+  }
+  // MyDashboard after you expand in table - for expansion Icons
+  .materialReactExpandableTable * {
+    border-color: #ccc;
+    color: $white;
+  }
+  //for sale attainment second table
+  .attainprogresstable {
+    tr {
+      &:nth-of-type(3) > td {
+        color: black !important;
+      }
+    }
+    td {
+      &:nth-of-type(1) {
+        color: #ffffff;
+      }
+    }
+  }
+  //opertunity sales table data
+  .sales-opertunity-html-table:not(.toHead) tbody tr td {
+    color: $white !important;
+  }
+  .sales-opertunity-html-table:not(.toHead) tbody tr td:has(.summary) {
+    b {
+      color: #000 !important;
+    }
+  }
+}

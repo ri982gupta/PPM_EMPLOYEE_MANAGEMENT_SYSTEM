@@ -1,0 +1,134 @@
+.customerTargetsTable {
+  width: 100%;
+  max-height: 45vh;
+  margin-bottom: 15px;
+  overflow-y: scroll;
+  table {
+    border-collapse: separate;
+    width: auto;
+    font-size: 13px;
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      tr {
+        th {
+          background-color: #f4f4f4;
+          vertical-align: middle;
+          min-width: 100px;
+          text-align: center;
+          font-size: 13px;
+          color: black;
+        }
+        &:first-of-type {
+          th:first-of-type {
+            position: sticky;
+            left: 0;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:first-of-type {
+          td {
+            background-color: #f5d5a7 ;
+            font-weight: bold;
+          }
+        }
+        td {
+          &:nth-of-type(odd) {
+            background: #d8eaea;
+          }
+          &:nth-of-type(even) {
+            background: #f5e5e5;
+          }
+          &:last-of-type {
+            background: #f2f29f;
+          }
+          &:nth-of-type(1),
+          &:nth-of-type(2),
+          &:nth-of-type(3),
+          &:nth-of-type(4) {
+            background: #d4e7fb;
+            & span {
+              width: 85%;
+              text-overflow: ellipsis;
+              overflow-x: hidden;
+              white-space: nowrap;
+            }
+          }
+        }
+        &:nth-of-type(1) {
+          td {
+            background: #b3bdc7;
+          }
+        }
+      }
+      input[type="text"] {
+        float: right;
+        border-color: #91B4B7 !important;
+        border-radius: 1px !important;
+        border-width: 1px;
+        text-align: right;
+        padding-right: 3px;
+        font-size: 13px !important;
+        height: 28px !important;
+      }
+    }
+    tr {
+      @mixin stickyStyles {
+        padding: 5px;
+        vertical-align: middle;
+        width: 90px;
+        max-width: 90px;
+        &:nth-of-type(1) {
+          position: sticky;
+          left: 0;
+          min-width: 180px;
+          max-width: 180px;
+          z-index: 2;
+          div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          }
+        }
+        &:nth-of-type(2) {
+          position: sticky;
+          left: 180px;
+          min-width: 65px;
+          max-width: 65px;
+          z-index: 2;
+        }
+        &:nth-of-type(3) {
+          position: sticky;
+          left: calc(180px + 65px);
+          min-width: 65px;
+          max-width: 65px;
+          z-index: 2;
+        }
+        &:nth-of-type(4) {
+          position: sticky;
+          left: calc(180px + 65px + 65px);
+          min-width: 165px;
+          max-width: 165px;
+          z-index: 2;
+          div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+          }
+        }
+      }
+      &:nth-of-type(1) {
+        th {
+          @include stickyStyles;
+        }
+      }
+      td {
+        @include stickyStyles;
+      }
+    }
+  }
+}

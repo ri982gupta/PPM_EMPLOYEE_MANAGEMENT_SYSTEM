@@ -1,0 +1,135 @@
+/*-------------------------Kaif's Code----------------------------*/
+
+.darkHeader.customCard .pipelinetable {
+  border-collapse: separate;
+  thead {
+    tr {
+      &:nth-of-type(1) {
+        th {
+          position: sticky;
+          top: 0;
+          z-index: 2;
+        }
+      }
+
+      &:nth-of-type(2) {
+        th {
+          position: sticky;
+          top: 23.76px;
+          z-index: 2;
+        }
+      }
+
+      &:nth-of-type(3) {
+        th {
+          position: sticky;
+          top: 47.52px;
+          z-index: 2;
+        }
+      }
+    }
+  }
+
+  tr {
+    th,
+    td {
+      border: 1px solid #bdb7b7 !important;
+      border-collapse: collapse !important;
+    }
+  }
+}
+
+.darkHeader.customCard
+  .table.table-bordered.pipelinetable
+  tr
+  th.executive:first-of-type {
+  position: sticky;
+  left: 0;
+  z-index: 3;
+}
+
+/*--------------------END------------------------------------------------*/
+
+// .pipelinetable tr td:first-of-type {
+//     position: sticky;
+//     left: 0;
+//     background-clip: padding-box;
+//     z-index: 1000;
+//     background-color: #fff;
+//     white-space: nowrap !important;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     text-align: left;
+// }
+// td.pipetd {
+//     white-space: nowrap !important;
+// }
+
+// .pipeth {
+//     text-align: center;
+// }
+// td.asofnow {
+//     background-color: #f2f29f !important;
+// }
+// td.service{
+//     background-color: #e6ecff;
+//     text-align: right;
+// }
+// td.software{
+//     background-color: #ecffe5;
+//     text-align: right;
+// }
+// th.executive.pipeth {
+//     position: sticky;
+//     left: 0;
+//     background-clip: padding-box;
+//     z-index: 1000;
+//     background: white;
+//     vertical-align: middle;
+// }
+// .proName{
+//     color: #297ab0;
+//     font-size: 14px;
+// }
+
+// .progresstable{
+//     font-size:12px;
+// }
+// table.progresstable tr:nth-of-type(2n+2){
+// 	background:#e5f9ff;
+// }
+// table.progresstable tr:nth-of-type(2n+1){
+// 	background:#fafadc;
+// }
+// td.pipetd {
+//     min-width: 70px;
+// }
+// .rmsc .dropdown-heading{
+//     height: auto;
+// }
+// .error{
+//     animation: shake 0.2s ease-in-out 0s 2;
+//     box-shadow: 0 0 0.5em red;
+// }
+// .alert{
+//     border: 1px solid rgba(0.1, 0, 0, 0);
+//     margin-bottom: 5px;
+//     padding: 5px;
+//     float: left;
+//     width: 100%;
+// }
+// .country{
+//     text-align: center;
+// }
+// .closeDate{
+//     text-align: center;
+// }
+// .amount{
+//     text-align: right;
+// }
+// .probability{
+//     text-align: right;
+// }
+// .grossMargin{
+//     text-align: right;
+// }

@@ -1,0 +1,54 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.capacityPlanCalenderTable {
+  .hierarchyIcon {
+    font-size: $pageFont;
+    color: #3c90c9;
+    margin-right: 5px;
+  }
+
+  th {
+    vertical-align: middle;
+
+    &:has(.md) {
+      min-width: 120px;
+    }
+  }
+
+  // rowspan mixin for Material React Table
+  @include mixer(54);
+
+  thead {
+    .mixer {
+      &>div {
+        line-height: 1;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      &:last-of-type {
+        td {
+          background-color: $lightGray;
+          font-weight: bold;
+        }
+      }
+
+      td {
+        .totalRow {
+          font-weight: bold;
+        }
+
+        &:has(.blueHoliday) {
+          background: $blue;
+        }
+
+        &:has(.pinkLeave) {
+          background: $pink;
+        }
+      }
+    }
+  }
+}

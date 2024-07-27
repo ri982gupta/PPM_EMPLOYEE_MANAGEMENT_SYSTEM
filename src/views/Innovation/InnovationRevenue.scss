@@ -1,0 +1,93 @@
+@import "../../scss/variables";
+
+.InnovationRevenue {
+  table {
+    thead {
+      th {
+        background-color: #566f84;
+      }
+    }
+    tbody {
+      tr {
+        &:nth-of-type(1) {
+          background-color: #f5d5a7 !important;
+        }
+        &:not(:nth-of-type(1)) {
+          background-color: #d4e7fb;
+        }
+      }
+    }
+    td {
+      padding: 4px !important;
+    }
+  }
+  .p-treetable table {
+    font-size: 13px !important;
+    // font-size: $pageFont !important;
+  }
+  th {
+    position: sticky !important;
+    top: 0px !important;
+    z-index: 16 !important;
+    text-overflow: ellipsis;
+    /* If you want to add background color to the sticky row */
+  }
+  .pi {
+    font-size: 13px !important;
+  }
+
+  tr:has(td .lvl3) {
+    background-color: white !important;
+    text-align: right !important;
+  }
+  tr:has(td .lvl3withoutlink) {
+    background-color: white !important;
+    // text-align: right !important;
+  }
+  td.custom-class-for-lvl-2 {
+    background-color: #fafad2ed;
+  }
+
+  td:has(.lvl3) {
+    text-align: end !important;
+  }
+  tr:has(td .custom-class-for-lvl-2) {
+    background-color: #fafad2ed !important;
+    text-align: right !important;
+  }
+
+  tr th:nth-of-type(1) {
+    position: sticky !important;
+    left: 0 !important;
+    z-index: 75 !important;
+  }
+  tr th:nth-of-type(2) {
+    position: sticky !important;
+    left: 60px !important;
+    z-index: 75 !important;
+  }
+
+  tr td:nth-of-type(1) {
+    position: sticky !important;
+    left: 0;
+  }
+  tr td:nth-of-type(2) {
+    position: sticky !important;
+    left: 60px;
+  }
+
+  tr {
+    td {
+      &:has(.RemoveEmptyBorderTop) {
+        border-top: none !important;
+        border-bottom: none !important;
+      }
+      &:has(.RemoveEmptyBorderBottom) {
+        border-bottom: none !important;
+      }
+    }
+  }
+  .css-10062bc-MuiButtonBase-root-MuiIconButton-root.Mui-disabled {
+    display: none !important;
+  }
+}

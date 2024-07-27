@@ -1,0 +1,26 @@
+.customer-projects-table{
+    .p-datatable-wrapper{
+        max-height: var(--dynamic-value);
+        table{
+            border-collapse: separate;
+            thead{
+                position: sticky;
+                top: 0;
+                z-index: 2;
+            }
+        }
+    }
+}
+.legend-Container-export-btn-wrapper{
+    display: flex;
+    justify-content: space-between;
+    .legendContainer{
+        p{
+            font-size: 14px;
+        }
+    }
+}
+
+.customer-project-screen-margin{
+    margin-bottom: 0px !important;
+}

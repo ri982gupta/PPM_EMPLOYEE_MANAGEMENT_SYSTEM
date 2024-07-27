@@ -1,0 +1,63 @@
+@import "../../scss/variables";
+//for report's main screen breadcrum
+.childOne {
+  .reports-breadcrum {
+    position: relative;
+    z-index: 9999;
+    top: -47px;
+    display: flex;
+    gap: 2px;
+    margin-left: 49px;
+    .breadcrumbHomeIcon {
+      color: $primary2;
+    }
+    .drop-down-link {
+      a {
+        color: $accent;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.borderClass {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.paddingLeft {
+  // margin-left: 5px;
+  padding-left: 20px;
+}
+// .backgroundColorClass{
+//     background-color: #eee;
+// }
+Link {
+  text-decoration: none;
+}
+
+.borderClass.head-header-design {
+  background-color: #4e68a5;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.box-in-between-margin {
+  margin-bottom: 10px;
+  .box-header-design {
+    background-color: #4e68a5;
+    font-weight: bolder;
+    color: #fff;
+    padding-left: 5px;
+  }
+  .borderClass.paddingLeft {
+    background-color: #edeff6;
+  }
+}
+
+.breadcrumb-item.active {
+  a {
+    &:not(.breadcrumbHomeIcon) {
+      color: $accent !important;
+      text-decoration: none;
+    }
+  }
+}

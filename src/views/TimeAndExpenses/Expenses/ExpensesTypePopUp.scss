@@ -1,0 +1,43 @@
+.file-label {
+  display: inline-block;
+  padding: 2px 10px;
+  background-color: #ddd;
+  color: black;
+  cursor: pointer;
+}
+
+.file-label input[type="file"] {
+  display: none;
+}
+
+.iconColor {
+  background-color: #f88f2e;
+  cursor: pointer;
+}
+
+.multiStopsContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+  input {
+    width: 150px !important;
+  }
+  label {
+    width: 70px;
+  }
+}
+.amtTbl {
+  font-size: 13px;
+  float: right;
+  border: 0px;
+}
+.Net_table {
+  tr {
+    padding: 5px;
+  }
+  td {
+    padding: 5px;
+    font-weight: bold;
+  }
+}

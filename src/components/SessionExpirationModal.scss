@@ -1,0 +1,88 @@
+@import "../scss/variables";
+
+
+
+.custom-modal {
+  max-width: 260px; 
+  max-height: 200px; 
+  margin: auto; 
+}
+
+.modalBody{
+  padding: 3px;
+}
+
+.popupMsg {
+  font-size: 14px;
+  color: black;
+  text-align: center;
+  padding: 15px;
+  height: 100px;
+  // border: 1.5px solid #428bca;
+  // background-color: rgb(52 139 202 / 17%);
+}
+.countdownText{
+ display: block;
+ text-align: center;
+ font-size: 15px;
+ padding-right: 6px;
+}
+
+.countdownText2{
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  padding-left: 20px;
+ }
+
+.countdown {
+  // animation: heartbeat 1s infinite;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+}
+
+.modalTitle {
+  color: $white !important;
+  font-weight: bold;
+  text-shadow: 0 0 black !important;
+}
+
+.warningIcon {
+  // animation: blink 1s infinite;
+  color: #f3b234 !important;
+  font-size: 20px;
+}
+.modalHeader {
+  background-color: #f3b234 !important;
+}
+
+.continueBtn {
+  font-weight: bold;
+  background-color: $accent !important;
+}
+
+// @keyframes blink {
+//   0% {
+//     opacity: 1;
+//   }
+//   50% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes heartbeat {
+//   0% {
+//     transform: scale(1);
+//   }
+//   50% {
+//     transform: scale(1.1);
+//   }
+//   100% {
+//     transform: scale(1);
+//   }
+// }

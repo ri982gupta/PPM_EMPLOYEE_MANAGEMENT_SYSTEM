@@ -1,0 +1,13 @@
+@import "../../scss/variables";
+
+.opportunityViewPopup {
+  div {
+    color: $black;
+    font-size: $pageFont;
+    & > b {
+      font-size: $smallFont;
+      color: $darkgray;
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import "../../scss/variables";
+
+.timesheetTable {
+  table {
+    thead {
+      tr {
+        th {
+          & > * {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+          }
+          &:nth-of-type(2){
+            position: sticky;
+            left: 0;
+            z-index: 3;
+          }
+        }
+        
+      }
+    }
+    
+  }
+}
+
+.approvalBtns {
+  .MuiPopover-paper {
+    background: none !important;
+  }
+}
+
+.darkHeader.timesheetTable{
+  tbody{
+    tr{
+      td{
+        border: 1px solid rgba(32, 32, 32, 0.1) !important;
+        &:nth-of-type(3),&:nth-of-type(2){
+          text-align: left;
+        }
+        &:nth-of-type(2){
+          position: sticky;
+          left: 0;
+          z-index: 3;
+        }
+      }
+      
+    }
+  }
+}

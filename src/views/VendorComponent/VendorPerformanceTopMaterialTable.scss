@@ -1,0 +1,307 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.VendorPerformanceTop {
+  table {
+    border-collapse: separate;
+    @include mixer(69);
+    &:has(.parentCadre) {
+      tr {
+        th,
+        td {
+          &:nth-of-type(3) {
+            min-width: 80px;
+            max-width: 80px;
+            position: sticky;
+            left: 280px;
+            background-color: #d4e7fb !important;
+          }
+
+          &:nth-of-type(4) {
+            min-width: 155px;
+            max-width: 155px;
+            position: sticky;
+            left: 360px;
+            background-color: #d4e7fb !important;
+          }
+        }
+      }
+    }
+  }
+  .MuiTableContainer-root {
+    // max-height: 73vh;
+    // overflow-y: auto;
+  }
+  thead {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    tr {
+      th:has(.mixer) {
+        span:nth-of-type(1) {
+          max-width: 135px;
+          display: inline-table;
+        }
+      }
+      th {
+        &:nth-of-type(2) {
+          max-width: 210px !important;
+          min-width: 210px !important;
+          .MuiTableSortLabel-root {
+            display: none !important;
+          }
+        }
+        vertical-align: middle;
+      }
+
+      &:nth-of-type(2) {
+        th {
+          & > div {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+
+  // tbody {
+  //   td {
+  //     text-align: right;
+  //     &:nth-of-type(2) {
+  //       text-align: left;
+  //     }
+  //   }
+
+  //   :has(.childCadre) {
+  //     background: $white !important;
+  //     text-align: center;
+  //   }
+
+  //   :has(.childRow) {
+  //     background: $white !important;
+  //   }
+
+  //   :has(.parentRow) {
+  //     background: #d4e7fb !important;
+  //   }
+
+  //   :has(.parentCadre) {
+  //     background: #d4e7fb !important;
+  //   }
+  // }
+
+  tr {
+    th:nth-of-type(2) {
+      position: sticky !important;
+      left: 0px;
+      z-index: 4;
+    }
+    td:nth-of-type(2) {
+      position: sticky;
+      left: 0px;
+      z-index: 2;
+    }
+  }
+}
+
+.vendorResourceTable {
+  .p-datatable.p-datatable-gridlines .p-datatable-thead > tr > th {
+    border-width: 0 1px 0 0 !important ;
+  }
+  // &.p-datatable.p-datatable-gridlines .p-paginator-bottom {
+  //   margin-top: -80px;
+  // }
+  .p-datatable-wrapper {
+    // overflow-x: auto;
+    // max-height: 40vh;
+    // overflow-y: hidden;
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+      // margin-bottom: 80px;
+      thead {
+        position: sticky;
+        top: 0;
+        z-index: 3;
+      }
+      tr {
+        th,
+        td {
+          border-left: 0 !important;
+          &:nth-of-type(1) {
+            position: sticky;
+            left: 0;
+            min-width: 120px;
+            max-width: 120px;
+          }
+          &:nth-of-type(2) {
+            position: sticky;
+            left: 120px;
+          }
+        }
+        td {
+          .autoComplete-container .wrapper > :first-of-type + * ul {
+            max-height: 80px;
+          }
+          &:nth-of-type(1) {
+            background-color: $white !important;
+          }
+          &:nth-of-type(2) {
+            background-color: $white !important;
+          }
+        }
+      }
+    }
+  }
+}
+/*------------------------------------------------------------------*/
+.VendorPerformanceTop.darkHeader {
+  table {
+    tbody {
+      tr {
+        td {
+          height: 22px !important;
+          text-align: right;
+          &:nth-of-type(1),
+          &:nth-of-type(2) {
+            text-align: left;
+          }
+
+          &:nth-of-type(2) {
+            &:has(.lvl\-2) {
+              padding-left: 15px;
+            }
+            &:has(.lvl\-3) {
+              padding-left: 25px;
+            }
+            &:has(.lvl\-4) {
+              padding-left: 35px;
+            }
+            &:has(.lvl\-5) {
+              padding-left: 45px;
+            }
+          }
+
+          &:has(.odd .resource.lvl) {
+            background-color: #f5e5e5 !important;
+          }
+          &:has(.even .resource.lvl) {
+            background-color: #d8eaea7a !important;
+          }
+          &:has(.total .resource.lvl) {
+            background-color: #ffffe6 !important;
+          }
+          &:has(.odd) {
+            background-color: #facbcb !important;
+          }
+          &:has(.even) {
+            background-color: #c5e8e8 !important;
+          }
+          &:has(.total) {
+            background-color: #f2f29f !important;
+          }
+          &:has(.parentRow) {
+            background-color: #d4e7fb !important;
+            text-align: left;
+          }
+          &:nth-of-type(1) {
+            background-color: #d4e7fb !important;
+          }
+          &:has(.childRow) {
+            background-color: #eaf4ff !important;
+            &:has(img) {
+              font-weight: 600 !important;
+            }
+          }
+
+          &:has(.childCadre) {
+            background-color: #eaf4ff !important;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+  .exceliconadjust {
+    font-size: 14px !important;
+  }
+}
+
+.VendorPerformanceTop.darkHeader {
+  table {
+    tbody {
+      tr:first-of-type {
+        td {
+          background-color: #b3bdc7 !important;
+        }
+      }
+    }
+  }
+}
+
+/*---------------------End-----------------------*/
+
+/*---------------------For vendorPerformanceResourcetable----------------------------*/
+
+.vendorPerformanceResourcetable {
+  table {
+    td {
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        background-color: $white !important;
+      }
+    }
+  }
+}
+
+// for resource screen table
+.resource-head-count-details-table {
+  .Vendor {
+    .vendorResourceTable {
+      table {
+        thead {
+          th {
+            text-align: center !important;
+          }
+        }
+        th,
+        td {
+          &:nth-of-type(1) {
+            max-width: 80px;
+            min-width: 80px;
+            .legendContainer {
+              justify-content: center;
+            }
+          }
+          &:nth-of-type(2) {
+            max-width: 80px;
+            min-width: 80px;
+            text-align: center;
+            left: 80px;
+            position: sticky;
+          }
+
+          &:nth-of-type(3) {
+            position: sticky;
+            left: 160px;
+          }
+        }
+        td {
+          &:nth-of-type(3) {
+            background-color: #fff;
+          }
+          &:nth-last-of-type(1) {
+            .align.center.ellipsis {
+              justify-content: flex-start;
+            }
+          }
+          &:nth-last-of-type(4) {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

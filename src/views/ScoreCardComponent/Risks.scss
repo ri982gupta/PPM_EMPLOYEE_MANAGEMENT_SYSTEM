@@ -1,0 +1,34 @@
+.scorecard-project-risk-drop-down {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  padding: 10px 12px 10px 12px;
+  select {
+    width: 100px !important;
+    margin-left: 4px;
+  }
+  span {
+    font-weight: 600;
+  }
+}
+
+.scorecard-project-risk-table {
+  padding: 10px !important;
+  .p-datatable-wrapper {
+    overflow: auto;
+    max-height: 400px;
+    table {
+      border-collapse: separate;
+
+      thead {
+        th {
+          position: sticky;
+          top: 0;
+          z-index: 2;
+          min-width: 110px;
+          max-width: 110px;
+        }
+      }
+    }
+  }
+}

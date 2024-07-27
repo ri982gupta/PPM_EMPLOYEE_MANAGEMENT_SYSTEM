@@ -1,0 +1,87 @@
+
+.no-padding {
+	padding:0 !important;
+}
+.required{
+    color: red;
+}
+.hidden{
+    display: none;
+}
+.hover{
+    display: none;
+}
+.center-row{
+    text-align: center;
+    
+}
+.button{
+    font-size: 12px;
+    padding:0px 24px ;
+    background-color:#0e74b8;
+    font-weight: 500;
+}
+.save{
+    padding: 4px 6px 6px 5px !important;
+    background-color: #0e74b8;
+    color: #f4f4f4;
+    width: auto;
+    height: 28px;
+    margin-right: 10px;
+
+}
+.Cancel{
+    background: color #e1e1e1;
+    width: auto;
+    height: 28px;
+}
+.TableForm {
+    margin-bottom: 10px; /* changed to 10px from 6px as requested*/
+	clear:left;
+}
+.documenttypes{
+    /* margin-bottom:2px; */
+    color:#de1d1d;
+    font-size: 12px;
+    font-family: 'Roboto',sans-serif;
+}
+.errorMessageField{
+    border: 1px solid rgb(183 1 1) !important;
+    border-radius: 4px !important;
+}
+.SuccessMessage{
+    border: 1px solid green !important;
+    color: rgb(7, 112, 7);
+    font-size: 12px;
+    background-color:rgb(32, 172, 32);
+    padding: 2px 5px 1px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    border-radius: 4px;
+}
+.inputValuesStyle {
+    padding:0px;
+    width: 100%;
+    height: 25px;
+    border-radius: 4px;
+}
+.DisableField{
+    opacity: 1;
+    color: #999 !important;
+    cursor: not-allowed;
+    background-color:#eee !important;
+
+}
+.sc-hLBbgP eXRSTE{
+    display: none;
+}
+.sc-bcXHqe hVRzLL{
+    display: none;
+}
+
+.cTBHzh > .wrapper{
+    padding-left: 0px !important;
+}
+.Auto-header {
+    padding-left: 0px !important;
+}

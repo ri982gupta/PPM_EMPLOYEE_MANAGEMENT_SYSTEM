@@ -1,0 +1,53 @@
+// $primary: #02277f;
+// $accent: #15a7ea;
+
+// $primary: black;
+$primary2: var(--primary, #02277f);
+$accent: var(--accent, #15a7ea);
+
+$white: #fff;
+$black: #202020;
+$gray: #d2d2d2;
+$lightGray: #ddd;
+$red: #e41b1b;
+$green: #3fb141;
+$amber: #d7ae09;
+$orange: #f88f2e;
+$antiquewhite: #faebd7;
+$pink: #f18ab2;
+$blue: #85c1e9;
+$blueTxtLink: #2e88c5;
+// $tableHeaderGray: #566f84;
+$tableHeaderGray: var(--primary-light, #4e68a5);
+$tableSummaryGray: #b3bdc7;
+
+//Pyramid Index
+$skyblue: #7cb4ec;
+$darkgray: #434348;
+$lightgreen: #90ed7c;
+$lightorange: #f7a35c;
+$purple: #8085e9;
+$crimson: #f15b7f;
+$golden: #e4d354;
+
+//Head Count & Margin Trends
+$lightbrown: rgb(225, 118, 88);
+$brown: #b8860b;
+$darkgreen: rgba(66, 144, 99, 0.9);
+
+// Fonts
+$sidenavFont: 14px;
+$tableFont: 13px;
+$pageFont: 14px;
+$h2Font: 17px;
+$smallFont: 13px;
+$bigFont: 20px;
+
+// DarkMode Colors
+$darkBg: #15243e;
+$darkBlue: #0c1a32;
+$trOdd: lighten($darkBlue, 8%);
+$trEven: lighten($darkBlue, 4%);
+$pageTitleBg: rgba($white, 0.5);
+$darkModeBorder: rgba($white, 0.2);
+$color9: #9d7c42;

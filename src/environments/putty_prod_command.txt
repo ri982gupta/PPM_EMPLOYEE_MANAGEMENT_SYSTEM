@@ -1,0 +1,18 @@
+cp -r /var/www/ppm /home/irfanm/ppm_backup/
+
+
+ 1002  cd /var/www/
+ 1003  ls
+ 1004  cp /var/www/ppm /home/irfanm/ppm_backup/
+ 1005  cp -r /var/www/ppm /home/irfanm/ppm_backup/
+ 1006  cd /home/irfanm
+ 1007  ls
+ 1008  cd ppm_backup/
+ 1009  ls
+ 1010  cd /var/www/
+ 1011  ls
+ 1012  rm -R ppm
+ 1013  ls
+ 1014  sudo mv /home/irfanm/new_ppm_build/ppm .
+ 1015  ls
+ 1016  sudo service nginx reload

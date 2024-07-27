@@ -1,0 +1,74 @@
+@import "../../scss/variables";
+
+.RevenueForecastMultiSelect {
+  width: 100% !important;
+  border-radius: 5px !important;
+  background-color: #fff;
+  border: 1px solid #ddd !important;
+  height: 23px !important;
+  font-size: 13px;
+  position: relative;
+  z-index: 9;
+  display: flex;
+  flex-direction: row;
+  color: #202020;
+}
+
+.RevenueForecastMultiSelect-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  padding-left: 6px;
+}
+
+.iconbutton {
+  // margin-left: 2rem;
+  font-size: 14px;
+  margin-top: -3px;
+  margin-right: 3px;
+}
+
+.customSelect {
+  position: absolute;
+  margin-top: 25px;
+  background: white;
+  border-radius: 5px;
+  width: 100%;
+  height: 240px;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid #ddd;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.customDropdown {
+  overflow: auto;
+  max-height: 229px;
+  .all {
+    padding: 5px 5px 0;
+  }
+  .group {
+    margin: 0;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba($black, 0.1);
+    .groupHeader {
+      padding-left: 8px;
+    }
+    .options {
+      margin-bottom: 0;
+      list-style-type: none;
+
+      li {
+        padding-left: 16px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+  }
+  .checked {
+    background-color: #e2e6ea;
+  }
+}

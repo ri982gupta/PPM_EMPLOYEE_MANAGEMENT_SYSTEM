@@ -1,0 +1,303 @@
+/* YourComponent.css */
+.PCQA-react-table.Project-detail-Table.darkHeader.toHead {
+  table {
+    tbody {
+      td {
+        &:nth-of-type(12) {
+          background-color: #f4f8ff !important;
+        }
+      }
+    }
+  }
+}
+/* Style the table element */
+// table {
+//   width: 100%;
+//   border-collapse: collapse;
+//   border: 1px solid #ddd;
+//   // table-layout: fixed; /* Fix the table layout */
+// }
+
+/* Style table headers */
+th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  // background-color: #f2f2f2;
+}
+
+/* Style table cells */
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  white-space: nowrap; /* Prevent cell content from wrapping */
+  overflow: hidden; /* Hide content overflow */
+  text-overflow: ellipsis; /* Show ellipsis (...) for overflowing text */
+}
+
+.custom-modal {
+  width: 100%; /* Adjust the width value as needed */
+  /* margin: 0 auto; Center the modal horizontally if needed */
+}
+
+.darkHeader.PCQA-react-table {
+  .p-datatable-wrapper {
+    overflow: auto;
+  }
+  table {
+    table-layout: unset;
+    thead {
+      tr {
+        th {
+          min-width: 80px !important;
+          padding: 2px 6px !important;
+          font-size: 14px !important;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          min-width: 80px !important;
+          &:nth-of-type(-n + 3) {
+            background-color: #f4f9f4 !important;
+          }
+          &:nth-of-type(n + 4):nth-of-type(-n + 10) {
+            background-color: #f2feff !important;
+          }
+          &:nth-last-child(-n + 4) {
+            background-color: #e6ecf7 !important;
+            justify-content: center;
+          }
+
+          &:nth-of-type(2) {
+            .ellipsis {
+              max-width: 360px;
+              padding-left: 4px;
+            }
+          }
+
+          &:nth-of-type(4),
+          &:nth-of-type(9) {
+            justify-content: end;
+          }
+
+          &:nth-of-type(10),
+          &:nth-of-type(1) {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.PopUP-table-type-QCR {
+  margin-bottom: 15px;
+  thead {
+    th {
+      text-align: center !important;
+    }
+  }
+  tr {
+    th,
+    td {
+      &:nth-of-type(1) {
+        max-width: 80px;
+        width: 80px;
+      }
+      &:nth-of-type(2),
+      &:nth-of-type(4) {
+        max-width: 200px;
+        width: 200px;
+      }
+    }
+    &:nth-of-type(3) {
+      max-width: 300px;
+      width: 300px;
+    }
+    &:nth-of-type(5) {
+      width: 300px;
+      max-width: 300px;
+      text-align: center;
+    }
+  }
+  .autoComplete-container {
+    top: 63px;
+    width: 183px;
+    position: absolute;
+  }
+}
+
+@media (max-width: 1200px) {
+  .PopUP-table-type-QCR {
+    tr {
+      th,
+      td {
+        &:nth-of-type(1) {
+          max-width: 50px;
+          width: 50px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        &:nth-of-type(2),
+        &:nth-of-type(4) {
+          max-width: 150px;
+          width: 150px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+      &:nth-of-type(3) {
+        max-width: 250px;
+        width: 250px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      &:nth-of-type(5) {
+        width: 250px;
+        max-width: 250px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+    .autoComplete-container {
+      top: 63px;
+      width: 193px;
+      position: absolute;
+    }
+  }
+}
+
+.PopUP-table-type-ISMS {
+  margin-bottom: 15px;
+  thead {
+    th {
+      text-align: center !important;
+    }
+  }
+  tr {
+    th,
+    td {
+      &:nth-of-type(1) {
+        max-width: 80px;
+        width: 80px;
+      }
+      &:nth-of-type(6),
+      &:nth-of-type(8) {
+        max-width: 180px;
+        width: 180px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      &:nth-of-type(2),
+      &:nth-of-type(3),
+      &:nth-of-type(4),
+      &:nth-of-type(5),
+      &:nth-of-type(7) {
+        max-width: 120px;
+        width: 120px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  .autoComplete-container {
+    position: absolute;
+    width: 164px;
+    top: 64px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .PopUP-table-type-ISMS {
+    tr {
+      th,
+      td {
+        &:nth-of-type(1) {
+          max-width: 50px;
+          width: 50px;
+        }
+        &:nth-of-type(6),
+        &:nth-of-type(8) {
+          max-width: 160px;
+          width: 160px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        &:nth-of-type(2),
+        &:nth-of-type(3),
+        &:nth-of-type(4),
+        &:nth-of-type(5),
+        &:nth-of-type(7) {
+          max-width: 80px;
+          width: 80px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    .autoComplete-container {
+      position: absolute;
+      width: 143px;
+      top: 64px;
+    }
+  }
+}
+/*----------------------End--------------------------------*/
+
+.facilitator-autocomplete-wrapper {
+  align-items: center;
+  gap: 5px;
+  span {
+    margin-top: -5px;
+  }
+  .autoComplete-container {
+    width: 80%;
+    margin-left: 3px;
+  }
+  .Facilitator-box {
+    font-size: 15px;
+  }
+}
+
+.footer-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.modal-footer:has(.footer-btn) {
+  padding: 7px;
+}
+
+// .legendContainer {
+//   .legend .yellow {
+//     color: yellow;
+//   }
+// }
+.invoicingSearchTable .legendContainer {
+  gap: 4px !important;
+}
+.invoicingSearchTable .legendContainer .legend .yellowColor {
+  color: yellow !important;
+}
+
+.invoicingSearchTable .legendCircle {
+  width: 13px !important;
+  height: 13px !important;
+}
+.yellowColorPCQA {
+  border-radius: 9px;
+  color: yellow;
+  display: flex;
+  align-items: center;
+  background-color: yellow;
+}

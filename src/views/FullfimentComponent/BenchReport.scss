@@ -1,0 +1,94 @@
+@import "../../scss/variables";
+
+.benchReportTable {
+  width: 100%;
+  overflow: auto;
+ /* Adjust the height as needed */
+  // overflow-y: scroll;
+  max-height: var(--dynamic-value) !important;
+  table {
+    border-collapse: separate;
+    margin-bottom: 0 !important;
+    // font-size: $tableFont;
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      font-size: 12px;
+      font-weight: 400;
+    }
+    tr {
+      th {
+        background-color: #f4f4f4;
+        border-right: 0;
+        border-bottom: 0;
+        line-height: 1.2;
+        height: 25px;
+      }
+
+      &:nth-of-type(1) {
+        th {
+          vertical-align: middle;
+          &:first-of-type {
+            position: sticky;
+            left: 0;
+            z-index: 2;
+          }
+        }
+      }
+      &:nth-of-type(1) {
+        td {
+          background-color: $tableSummaryGray !important;
+          font-weight: 600;
+        }
+      }
+      td {
+        min-width: 80px;
+
+        &:first-of-type {
+          min-width: 200px;
+          position: sticky;
+          left: 0;
+          background-color: #d4e7fb;
+          text-align: left !important;
+        }
+
+        // &:has(.lightTurquoise) {
+        //   background-color: #e1efef;
+        // }
+        // &:has(.lightBlue) {
+        //   background-color: #e6ecff;
+        // }
+        // &:has(.lightPink) {
+        //   background-color: #faf0f0;
+        // }
+        // &:has(.lemonGreen) {
+        //   background-color: #ecffe5;
+        // }
+        // &:has(.lightYellow) {
+        //   background-color: #ffffe6;
+        // }
+        // &:has(.skyBlue) {
+        //   background-color: #effdfd;
+        // }
+
+        &:has(.lightTurquoise),
+        &:has(.lightPink),
+        &:has(.lightYellow) {
+          background-color: #75f2f2;
+          &:last-of-type {
+            // background-color: #f2f29f;
+          }
+        }
+        &:has(.lightBlue),
+        &:has(.lemonGreen),
+        &:has(.skyBlue) {
+          background-color: #facbcb;
+          &:last-of-type {
+            // background-color: #f2f29f !important;
+          }
+        }
+      }
+    }
+  }
+}

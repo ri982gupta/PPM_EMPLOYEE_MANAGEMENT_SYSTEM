@@ -1,0 +1,297 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.darkHeader.calenderTable {
+  &:not(.toHead) {
+    tbody {
+      tr {
+        &:nth-of-type(odd) {
+          td {
+            background-color: $white !important;
+            border-top: 1px solid rgba($black, 0.1);
+            border-bottom: 1px solid rgba($black, 0.1);
+            &:has(.disabledDatesColumn) {
+              background-color: #f1f1f1 !important;
+            }
+            &:has(.pink) {
+              background-color: $pink !important;
+            }
+
+            &:has(.blue) {
+              background-color: $blue !important;
+            }
+          }
+        }
+        &:has(.odd) {
+          td {
+            background-color: #eef2f5 !important;
+            border-top: 1px solid rgba($black, 0.1);
+            border-bottom: 1px solid rgba($black, 0.1);
+            &:has(.disabledDatesColumn) {
+              background-color: #f1f1f1 !important;
+            }
+            &:has(.pink) {
+              background-color: $pink !important;
+            }
+
+            &:has(.blue) {
+              background-color: $blue !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .hierarchyIcon {
+    font-size: $pageFont;
+    color: #3c90c9 !important;
+    margin-right: 5px;
+  }
+  th {
+    vertical-align: middle;
+    &:has(.md) {
+      min-width: 120px;
+    }
+  }
+
+  // rowspan mixin for Material React Table
+  @include mixer(48);
+  thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    th {
+      min-width: 80px;
+      max-width: 80px;
+      & > div {
+        justify-content: center;
+      }
+      .mixer {
+        & > div {
+          line-height: 1;
+          text-wrap: wrap;
+        }
+      }
+      &:nth-of-type(2) {
+        .mixer {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+      &:has(.datesColumn) {
+        min-width: 55px;
+        max-width: 55px;
+      }
+      &:has(.disabledDatesColumn) {
+        color: darken($lightGray, 5%);
+        min-width: 30px;
+        max-width: 30px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      &:has(.total) {
+        td {
+          background-color: $tableSummaryGray !important;
+          font-weight: bold;
+        }
+      }
+      td {
+        vertical-align: middle;
+        min-width: 80px;
+        max-width: 80px;
+        div {
+          width: 100%;
+        }
+        &:has(.manager) div {
+          width: 95%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        &:has(.pink) {
+          background-color: $pink !important;
+        }
+
+        &:has(.blue) {
+          background-color: $blue !important;
+        }
+
+        &:first-of-type {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          & > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+        &:has(.disabledDatesColumn) {
+          background-color: lighten($lightGray, 8%) !important;
+
+          text-align: right;
+          min-width: 30px;
+          max-width: 30px;
+        }
+        &:has(.datesColumn) {
+          min-width: 55px;
+          max-width: 55px;
+        }
+        &:has(.align.right) {
+          justify-content: flex-end;
+        }
+
+        .legendCircle {
+          border-radius: 50%;
+          width: 10px;
+          height: 10px;
+          display: inline-table;
+          margin-top: 7px;
+          float: left;
+
+          &.green {
+            background-color: $green !important;
+          }
+
+          &.red {
+            background-color: $red !important;
+          }
+        }
+
+        .exclamation {
+          font-size: $pageFont;
+          margin-left: 8px;
+
+          &.gray {
+            color: $gray !important;
+          }
+
+          &.orange {
+            color: $orange !important;
+          }
+        }
+      }
+    }
+  }
+  th,
+  td {
+    &:nth-of-type(1) {
+      max-width: 80px;
+      min-width: 80px;
+    }
+    &:nth-of-type(2) {
+      max-width: 180px;
+      min-width: 180px;
+    }
+    &:has(.cadre) {
+      max-width: 70px;
+      min-width: 70px;
+    }
+    &:has(.businessUnit) {
+      max-width: 120px;
+      min-width: 120px;
+    }
+    &:has(.supervisor) {
+      max-width: 120px;
+      min-width: 120px;
+    }
+    &:has(.manager) {
+      max-width: 130px;
+      min-width: 130px;
+    }
+  }
+
+  thead:not(.cadre) {
+    tr:nth-of-type(2) {
+      th {
+        &:nth-of-type(3) {
+          max-width: 130px;
+          min-width: 130px;
+        }
+      }
+    }
+  }
+  thead:has(.cadre) {
+    tr:nth-of-type(2) {
+      th {
+        &:nth-of-type(3) {
+          max-width: 70px !important;
+          min-width: 70px !important;
+        }
+        &:nth-of-type(4) {
+          max-width: 120px;
+          min-width: 120px;
+        }
+        &:nth-of-type(5) {
+          max-width: 120px;
+          min-width: 120px;
+        }
+        &:nth-of-type(6) {
+          max-width: 130px;
+          min-width: 130px;
+        }
+      }
+    }
+  }
+}
+
+.allocationsCalenderTable {
+  th,
+  td {
+    & > * {
+      overflow-x: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-align: left;
+    }
+    &:nth-of-type(1) {
+      min-width: 150px !important;
+      max-width: 150px !important;
+    }
+    &:nth-of-type(2) {
+      min-width: 80px;
+      max-width: 80px;
+    }
+    &:nth-of-type(3) {
+      min-width: 30px !important;
+      max-width: 30px !important;
+    }
+  }
+}
+
+.engagementAllocationsTable {
+  th,
+  td {
+    max-width: 180px !important;
+  }
+}
+
+.hierarchyPopup {
+  & > div:first-of-type {
+    padding: 4px 8px;
+    background-color: $lightGray !important;
+    h2 {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.togle-expand-btn-margin {
+  margin-right: 20px;
+}
+
+.expandable-btn-container {
+  margin-top: -4px;
+
+  span {
+    cursor: pointer;
+  }
+}

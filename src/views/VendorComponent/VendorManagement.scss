@@ -1,0 +1,34 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+tbody {
+  tr {
+    :has(.brown) {
+      color: red !important;
+      background: red !important;
+      //text-align: center;
+    }
+  }
+}
+
+.totalHeadCountTable {
+  table {
+    tr {
+      th,
+      td {
+        &:nth-last-of-type(1),
+        &:nth-last-of-type(2),
+        &:nth-last-of-type(3),
+        &:nth-last-of-type(4),
+        &:nth-last-of-type(5),
+        &:nth-last-of-type(6) {
+          min-width: 120px;
+          max-width: 120px;
+        }
+      }
+    }
+  }
+}
+.vendorperformanceDatepicker .react-datepicker-popper {
+  z-index: 10 !important;
+}

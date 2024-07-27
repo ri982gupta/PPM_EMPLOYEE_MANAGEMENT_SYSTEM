@@ -1,0 +1,139 @@
+@import "../../scss/variables";
+
+.Role-Costs-for-country-table {
+  table {
+    th,
+    td {
+      &:nth-of-type(1) {
+        position: sticky;
+        left: 0;
+        z-index: 2;
+        max-width: 200px;
+        min-width: 193px;
+      }
+      &:nth-of-type(2) {
+        position: sticky;
+        left: 192.91px;
+        z-index: 2;
+      }
+      max-width: fit-content;
+      min-width: 90px;
+    }
+  }
+}
+.dropdown-container {
+  z-index: 100000 !important;
+}
+
+.roleViewStyle {
+  float: right;
+}
+.MuiTableHead-root {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 999 !important;
+}
+.p-datatable-thead {
+  position: sticky;
+  top: 0;
+}
+.materialReactExpandableTable thead tr:nth-of-type(2) th {
+  z-index: 1;
+}
+
+.p-datatable-wrapper,
+.MuiTableContainer-root {
+  overflow: scroll;
+  max-height: 368px;
+}
+.highlight-row {
+  background-color: #d2efc9 !important;
+}
+.bg-color {
+  background-color: #e4e4e4 !important;
+}
+
+.RoleCostpopuptable {
+  .col-md-3.mb-4 {
+    max-height: 150px;
+    overflow: auto;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.RoleCostpopuptable.darkHeader tbody tr td:has(.highlight-row) {
+  background-color: #d2efc9 !important;
+}
+.sticky-header {
+  position: sticky;
+  top: 0; /* Adjust this value based on your layout */
+  // background-color: #fff; /* Add a background color if needed */
+  z-index: 0; /* Set a z-index value to ensure it appears above other elements */
+}
+
+.countryTitle {
+  color: var(--accent, #15a7ea);
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+.role-cost-resource-view-table {
+  .p-datatable-header {
+    .heading-container {
+      text-align: center;
+    }
+    .execel-search-container {
+      display: flex;
+      justify-content: flex-end;
+      gap: 5px;
+      .excel-icon-container {
+        font-size: 15px;
+        color: #3fb141;
+      }
+    }
+  }
+  table {
+    font-size: 13px !important;
+    font-family: "Source Sans Pro";
+    width: 100% !important;
+    th {
+      &:nth-of-type(1) {
+        max-width: 100px;
+        min-width: 100px;
+      }
+      &:nth-of-type(6),
+      &:nth-of-type(7) {
+        max-width: 80px;
+        min-width: 80px;
+      }
+      &:nth-last-of-type(1) {
+        max-width: 100px;
+        min-width: 100px;
+      }
+    }
+    td {
+      &:nth-of-type(n + 6) {
+        text-align: right;
+      }
+      &:nth-of-type(10),
+      &:nth-of-type(6) {
+        text-align: center;
+      }
+    }
+  }
+}
+.role-cost-resource-view-table {
+  .p-datatable-wrapper {
+    overflow: auto;
+    max-height: var(--dynamic-value) !important;
+    table {
+      border-collapse: separate;
+      thead {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      }
+    }
+  }
+}

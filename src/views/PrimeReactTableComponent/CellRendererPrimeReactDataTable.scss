@@ -1,0 +1,45 @@
+@import "../../scss/variables";
+
+.reportsPrimeTable {
+  th,
+  td {
+    min-width: 80px !important;
+  }
+}
+
+.darkHeader.vendor-document-table{
+  .p-datatable-wrapper{
+    max-height: var(--dynamic-value)
+  }
+  table{
+    thead{
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+  }
+}
+
+.VendorPerformanceTop.darkHeader {
+  table {
+    max-height: var(--dynamic-value);
+    tbody {
+      tr:first-of-type {
+        td {
+          background-color: #b3bdc7 !important;
+        }
+      }
+    }
+  }
+  .p-datatable-wrapper table{
+    margin-bottom: 0px !important;
+  }
+}
+
+.engagement-screen-margin{
+  margin-bottom: 0px !important;
+}
+
+.QBR_screen-margin{
+  margin-bottom: 0 !important;
+}

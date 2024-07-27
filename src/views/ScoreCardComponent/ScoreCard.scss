@@ -1,0 +1,42 @@
+.softSummry {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.softSummry th {
+  position: sticky;
+  z-index: 1000;
+  background-color: #fff;
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.displayRow {
+  display: none;
+}
+
+.rmsc .dropdown-heading {
+  height: auto;
+}
+
+.customer {
+  padding: 0;
+}
+
+table {
+  font-size: 13px !important;
+}
+
+.trLvl0 {
+  background-color: #f5d5a7 !important;
+}
+
+.ellipsis {
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  max-width: 60px;
+}

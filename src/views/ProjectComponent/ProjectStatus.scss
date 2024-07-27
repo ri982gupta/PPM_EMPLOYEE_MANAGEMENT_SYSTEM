@@ -1,0 +1,17 @@
+@import "../../scss/variables";
+
+.customerEngament {
+  .p-paginator {
+    button {
+      height: 20px;
+    }
+    .p-paginator-current {
+      height: 13px;
+    }
+  }
+}
+
+.accomplishmentDates {
+  font-size: $pageFont;
+  font-weight: 700;
+}

@@ -1,0 +1,28 @@
+@import "../../scss/variables";
+
+.transferTable {
+  .ant-transfer-list {
+    width: calc(50% - 16px);
+    height: 150px;
+    .ant-empty-image {
+      display: none;
+    }
+  }
+
+  // &.error-block {
+  //   .ant-transfer-list {
+  //     &:has(.ant-empty) {
+  //       border: 1px solid $red !important;
+  //       background-color: rgba($red, 0.2) !important;
+  //     }
+  //   }
+  // }
+  &.error-block {
+    .ant-transfer-list-body {
+      &:has(.ant-empty) {
+        border: 1px solid $red !important;
+        background-color: rgba($red, 0.2) !important;
+      }
+    }
+  }
+}

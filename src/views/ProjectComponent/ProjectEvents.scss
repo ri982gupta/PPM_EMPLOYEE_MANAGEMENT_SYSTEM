@@ -1,0 +1,17 @@
+.eventsTable {
+  &.p-datatable {
+    width: fit-content;
+  }
+  th {
+    & > div {
+      position: relative;
+      justify-content: center;
+      gap: 10px;
+      .p-column-filter-menu {
+        margin: 0;
+        position: absolute;
+        right: 8px;
+      }
+    }
+  }
+}

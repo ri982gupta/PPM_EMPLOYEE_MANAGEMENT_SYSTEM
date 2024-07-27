@@ -1,0 +1,136 @@
+@import "../../scss/variables";
+
+.cslPartnerTable {
+  table {
+    thead {
+      tr {
+        th {
+          div {
+            justify-content: center;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:has(.cslPartner) td {
+          background-color: #d4e7fb !important;
+        }
+      }
+    }
+    th,
+    td {
+      &:nth-of-type(4) {
+        max-width: 180px;
+        min-width: 180px;
+        .ellipsis {
+          width: 150px;
+        }
+      }
+      &:nth-of-type(3) {
+        .ellipsis {
+          width: 220px;
+        }
+      }
+      &:has(.cslPartner) {
+        .cslPartner {
+          width: 230px;
+        }
+      }
+    }
+  }
+  .MuiTableBody-root {
+    border-right: 0 !important ;
+    border-bottom: 0 !important;
+    display: block;
+  }
+}
+
+// .roleProject {
+//   padding: 0;
+//   width: 100%;
+//   max-width: 25%;
+//   table {
+//     table-layout: fixed !important;
+//     tbody {
+//       tr {
+//         width: 100%;
+//         td {
+//           flex: 0 0 100% !important;
+//           max-width: unset !important;
+//           div {
+//             width: 100%;
+//             display: flex;
+//             justify-content: space-between;
+//             a {
+//               width: calc(100% - 20px);
+//               overflow: hidden;
+//               text-overflow: ellipsis;
+//               white-space: nowrap;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+.roleProject {
+  padding: 0;
+  width: 100%;
+  max-width: 25%;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+      tr {
+        th {
+          position: sticky;
+          top: 0;
+          z-index: 2;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          max-width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          padding: 5px; /* Add padding to improve appearance */
+        }
+      }
+    }
+  }
+}
+
+.cslPartnerTable.darkHeader:not(.toHead) tbody tr:has(.cslPartner) td {
+  background-color: #d4e7fb !important ;
+}
+.cslellipisis {
+  white-space: nowrap !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  max-width: 140px;
+}
+
+//TeamsHierarchyTable.scss
+.roleProject-project-hierarchy {
+  table {
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+  }
+}
+
+// ..hierarchyTree li.MuiTreeItem-root:has(li):after
+
+.HierarchyTreeTableContainer {
+  width: 30%;
+  .hierarchyTree li.MuiTreeItem-root:has(li):after {
+    width: 0px !important;
+  }
+}

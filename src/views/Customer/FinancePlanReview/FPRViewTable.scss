@@ -1,0 +1,579 @@
+@import "../../../scss/mixins";
+@import "../../../scss/variables";
+
+.darkHeader.timesheetTable {
+  // .darkHeader thead tr th div .MuiIconButton-root {
+  //   color: #4e68a5 !important;
+  //   background-color: white !important;
+  //   width: 22px !important;
+  //   height: 22px !important;
+  // }
+  thead {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+  }
+  /* Use a more specific selector to target the path within the specific SVG structure */
+  .MuiSvgIcon-root[data-testid="KeyboardDoubleArrowDownIcon"]
+    > path:nth-child(1) {
+    display: none;
+  }
+
+  .MuiBox-root .css-di3982 {
+    display: none;
+  }
+
+  tbody {
+    tr {
+      &:nth-of-type(1) {
+        td {
+          background-color: #b3bdc7 !important;
+        }
+      }
+
+      td {
+        border: 1px solid rgba(32, 32, 32, 0.1) !important;
+        text-align: right;
+        height: 22px !important;
+        padding: 5px;
+
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+          text-align: left;
+        }
+
+        &:has(.odd) {
+          background-color: #facbcb;
+        }
+
+        &:has(.even) {
+          background-color: #c5e8e8;
+        }
+
+        &:has(.total) {
+          background-color: #f2f29f;
+        }
+      }
+    }
+  }
+  .FPR-screen-note {
+    width: 73%;
+    color: #9d7c42;
+    border: 1px solid #f8e6c3;
+    margin-top: 0px;
+    margin-bottom: -30px;
+    position: relative;
+    bottom: -15px;
+    z-index: 2;
+    svg {
+      margin-right: 10px;
+      margin-top: -1px;
+    }
+  }
+}
+
+.darkHeader.secondTable {
+  thead {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+  }
+
+  tbody {
+    tr {
+      td {
+        border: 1px solid rgba(32, 32, 32, 0.1) !important;
+      }
+    }
+
+    height: 22px !important;
+  }
+}
+
+.timesheetTable .col-2 {
+  // for excel icon
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+/*-------------------PCA(Plannig Actual Compare) Table----------------------*/
+
+.PAC-FPR-Table {
+  table {
+    border-collapse: separate;
+
+    th:has(.mixerCustom) > * {
+      border: 0px !important;
+    }
+
+    tbody,
+    thead {
+      &:has(.expandable-column) {
+        th {
+          &:nth-of-type(5) {
+            max-width: 150px;
+            min-width: 150px;
+            position: sticky;
+            left: 430px;
+            z-index: 5;
+          }
+
+          &:nth-of-type(6) {
+            position: sticky;
+            left: 580px;
+            z-index: 5;
+          }
+
+          &:nth-of-type(7) {
+            max-width: 150px;
+            min-width: 150px;
+            position: sticky;
+            left: 680px;
+            z-index: 5;
+          }
+        }
+
+        td {
+          height: 23px;
+          padding: 5px;
+
+          &:nth-of-type(5) {
+            text-align: left;
+            background-color: #fff;
+            max-width: 150px;
+            min-width: 150px;
+            position: sticky;
+            left: 430px;
+            z-index: 1;
+          }
+
+          &:nth-of-type(6) {
+            text-align: left;
+
+            background-color: #fff;
+
+            position: sticky;
+            left: 580px;
+            z-index: 1;
+          }
+
+          &:nth-of-type(7) {
+            text-align: left;
+
+            background-color: #fff;
+
+            max-width: 150px;
+            min-width: 150px;
+            position: sticky;
+            left: 680px;
+            z-index: 1;
+          }
+        }
+      }
+
+      th,
+      td {
+        max-width: 100px;
+        min-width: 100px;
+      }
+
+      th {
+        &:nth-of-type(1) {
+          max-width: 80px;
+          min-width: 80px;
+          position: sticky;
+          left: 0;
+          z-index: 5;
+        }
+
+        &:nth-of-type(2) {
+          position: sticky;
+          left: 80px;
+          z-index: 5;
+        }
+
+        &:nth-of-type(3) {
+          max-width: 150px;
+          min-width: 150px;
+          text-align: left;
+          position: sticky;
+          left: 180px;
+          z-index: 5;
+        }
+
+        &:nth-of-type(4) {
+          position: sticky;
+          left: 330px;
+          z-index: 5;
+        }
+      }
+
+      td {
+        &:nth-of-type(1) {
+          background-color: #fff;
+          text-align: left;
+
+          max-width: 80px;
+          min-width: 80px;
+          position: sticky;
+          left: 0;
+          z-index: 1;
+        }
+
+        &:nth-of-type(2) {
+          background-color: #fff;
+          text-align: left;
+
+          position: sticky;
+          left: 80px;
+          z-index: 1;
+        }
+
+        &:nth-of-type(3) {
+          background-color: #fff;
+          text-align: left;
+
+          max-width: 150px;
+          min-width: 150px;
+          position: sticky;
+          left: 180px;
+          z-index: 1;
+        }
+
+        &:nth-of-type(4) {
+          background-color: #fff;
+          text-align: left;
+
+          position: sticky;
+          left: 330px;
+          z-index: 1;
+        }
+      }
+    }
+  }
+
+  .MuiTextField-root div {
+    padding: 1px 0px 1px 5px !important;
+  }
+
+  .MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-dense {
+    .MuiBox-root {
+      top: 10px !important;
+      .MuiTablePagination-root {
+        top: -10px;
+      }
+    }
+  }
+}
+
+/*-----------------END---------------------*/
+
+/*-------------------------View Table*-----------------*/
+
+.financial-viewTable {
+  table {
+    border-collapse: separate;
+
+    thead {
+      tr {
+        th {
+          &:nth-of-type(2) {
+            position: sticky;
+            left: 0;
+            z-index: 5;
+            padding: 0;
+
+            & > * {
+              padding: 0 16px;
+              background-color: inherit;
+
+              display: flex;
+              align-items: center;
+
+              margin-top: -25px;
+              height: 50px;
+            }
+          }
+
+          &:nth-of-type(1) {
+            position: sticky;
+            left: 0;
+            z-index: 5;
+            padding: 0;
+
+            & > * {
+              padding: 0 16px;
+              background-color: inherit;
+
+              display: flex;
+              align-items: center;
+
+              margin-top: -25px;
+              height: 50 px;
+            }
+          }
+        }
+
+        &:nth-of-type(1) {
+          th {
+            padding: 0 !important;
+          }
+        }
+
+        &:nth-of-type(2) {
+          th {
+            padding: 0 !important;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-of-type(1) {
+          td {
+            background-color: #b3bdc7 !important;
+            border-top: 0px !important;
+          }
+        }
+
+        td {
+          &:nth-of-type(2) {
+            position: sticky;
+            left: 0;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.compareTable.PAC-FPR-Table {
+  table {
+    border-collapse: separate;
+
+    @include mixerCustomthree(72);
+
+    thead {
+      opacity: 1;
+
+      tr {
+        &:nth-of-type(1) {
+          th {
+            padding: 0 !important;
+          }
+        }
+
+        &:nth-of-type(2) {
+          th {
+            padding: 0 !important;
+          }
+        }
+
+        &:nth-of-type(3) {
+          th {
+            padding: 0 !important;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-of-type(1) {
+          td {
+            padding-bottom: 0px !important;
+          }
+        }
+
+        //   td{
+        //   padding: 5px !important;
+        // }
+      }
+    }
+
+    thead,
+    tbody {
+      &:has(.expandable-column) {
+        th {
+          &:nth-of-type(4) {
+            max-width: 150px;
+            min-width: 150px;
+            position: sticky;
+            left: 330px;
+            z-index: 5;
+          }
+
+          &:nth-of-type(5) {
+            max-width: 150px;
+            min-width: 150px;
+            position: sticky;
+            left: 480px;
+            z-index: 5;
+          }
+
+          &:nth-of-type(6) {
+            position: sticky;
+            left: 630px;
+            z-index: 5;
+          }
+
+          &:nth-of-type(7) {
+            max-width: 100px;
+            min-width: 100px;
+            position: sticky;
+            left: 730px;
+            z-index: 5;
+          }
+        }
+
+        td {
+          &:nth-of-type(4) {
+            max-width: 150px;
+            min-width: 150px;
+            position: sticky;
+            left: 330px;
+            z-index: 1;
+          }
+
+          &:nth-of-type(5) {
+            max-width: 150px;
+            min-width: 150px;
+            position: sticky;
+            left: 480px;
+            z-index: 1;
+          }
+
+          &:nth-of-type(6) {
+            position: sticky;
+            left: 630px;
+            z-index: 1;
+          }
+
+          &:nth-of-type(7) {
+            max-width: 100px;
+            min-width: 100px;
+            position: sticky;
+            left: 730px;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*---------------END---------------------*/
+.FPR-Excel-icon-container {
+  float: right;
+  width: fit-content;
+  margin-top: 24px;
+
+  svg {
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+.FPR_view-excel-icon-container {
+  display: flex;
+  margin-bottom: 5px;
+  justify-content: end;
+
+  svg {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+.financial-viewTable {
+  .MuiTableRow-hover:hover {
+    background-color: $white;
+  }
+}
+
+.planningTable.PAC-FPR-Table {
+  @include mixerCustom(55);
+
+  table {
+    // border-width: 1px solid #4e68a5 !important;
+    border-collapse: separate;
+
+    thead {
+      opacity: 1;
+
+      tr {
+        &:nth-of-type(1) {
+          th {
+            padding: 0px;
+          }
+        }
+
+        &:nth-of-type(2) {
+          th {
+            padding-bottom: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.actualTable {
+  @include mixerCustom(55);
+  border-collapse: separate;
+
+  thead {
+    opacity: 1;
+
+    tr {
+      &:nth-of-type(1) {
+        th {
+          padding: 0px;
+        }
+      }
+
+      &:nth-of-type(2) {
+        th {
+          padding-bottom: 2px;
+        }
+      }
+    }
+  }
+}
+
+.financial-viewTable {
+  table {
+    tbody {
+      tr {
+        &:has(.accountLevel) {
+          td {
+            &:nth-of-type(1),
+            &:nth-of-type(2) {
+              padding-left: 15px !important;
+            }
+          }
+        }
+        &:has(.countryLevel) {
+          td {
+            &:nth-of-type(1),
+            &:nth-of-type(2) {
+              padding-left: 25px !important;
+            }
+          }
+        }
+        &:has(.resourceLevel) {
+          td {
+            &:nth-of-type(1),
+            &:nth-of-type(2) {
+              padding-left: 35px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// end of file

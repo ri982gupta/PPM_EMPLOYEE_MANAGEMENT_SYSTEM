@@ -1,0 +1,114 @@
+@import "../../../scss/variables";
+
+.expenseTypeTable {
+  th {
+    vertical-align: middle;
+  }
+}
+
+.expensesCreateTable {
+  thead {
+    tr {
+      &:first-of-type {
+        th {
+          svg {
+            font-size: 16px;
+            margin: 0 10px;
+          }
+        }
+      }
+      th {
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+  }
+  tbody {
+    td {
+      &:first-of-type {
+        width: 350px;
+        & > div {
+          display: flex;
+          gap: 8px;
+          .expandArrow {
+            min-width: fit-content;
+            display: flex;
+            gap: 4px;
+            align-items: flex-start;
+            input {
+              margin-top: 4px;
+            }
+          }
+          .expType {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            button {
+              align-self: flex-start;
+              display: flex;
+              align-items: center;
+              gap: 4px;
+              padding: 0 4px;
+              margin-bottom: 4px;
+              background-color: $orange;
+            }
+          }
+        }
+      }
+      .innerRows {
+        display: flex;
+        align-items: center;
+        svg {
+          background-color: $orange;
+          font-size: 16px;
+          &:nth-last-of-type(2) {
+            margin-left: auto;
+          }
+        }
+      }
+      .inputFields {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        input {
+          flex: 0 0 70%;
+          margin: 4px 0;
+        }
+      }
+      &:last-of-type {
+        width: 150px;
+      }
+    }
+  }
+}
+.Expense-All-Types{
+  overflow: auto;
+  max-height: var(--dynamic-value) !important;;
+  border-collapse: separate;
+  table{
+    margin-bottom: 0 !important;
+    border-collapse: separate;
+    thead{
+      position: sticky;
+      top: 0;
+      z-index: 2;
+  }
+  }
+}
+
+.pagination-and-btn-container-events-wrapper{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 0px 10px;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  .btn-container-events{
+    display: flex;
+    gap: 10px;
+    
+  }
+}

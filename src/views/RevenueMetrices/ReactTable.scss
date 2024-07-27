@@ -1,0 +1,176 @@
+@import "../../scss/variables";
+.employee_status {
+  position: relative; /* Ensure that the ::before pseudo-element is positioned relative to this element */
+}
+
+.employee_status::before {
+  content: "";
+  position: absolute; /* Position the pseudo-element absolutely within the .employee_status */
+  top: 4px;
+  left: 1px;
+  width: 12px; /* Set the width and height as needed */
+  height: 12px;
+  background-size: cover; /* Ensure the background image covers the entire pseudo-element */
+  z-index: 1; /* Set a negative z-index to place the background behind the content */
+}
+
+.employee_status.icon-employee::before {
+  background-image: url("../../assets/images/empstatusIcon/fte_active.png");
+}
+
+.employee_status.icon-contractor::before {
+  background-image: url("../../assets/images/empstatusIcon/subk_active.png");
+}
+
+.employee_status.icon-employee-inactive::before {
+  background-image: url("../../assets/images/empstatusIcon/fte_inactive.png");
+}
+.employee_status.icon-employee-notice::before {
+  background-image: url("../../assets/images/empstatusIcon/fte_notice.png");
+}
+.employee_status.icon-contractor-inactive::before {
+  background-image: url("../../assets/images/empstatusIcon/subk_inactive.png");
+}
+.employee_status.icon-contractor-notice::before {
+  background-image: url("../../assets/images/empstatusIcon/subk_notice.png");
+}
+.pointer {
+  cursor: pointer;
+}
+.MRF-summary-by-region-table-BUview {
+  width: 100%;
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+  table {
+    border-collapse: separate;
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      text-align: center;
+      line-height: 1.2;
+    }
+    th,
+    td {
+      padding: 8px;
+      border-right: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      max-width: 90px;
+      min-width: 80px;
+    }
+    tr {
+      &:nth-of-type(1) {
+        th,
+        td {
+          &:nth-of-type(1) {
+            min-width: 230px;
+            max-width: 230px;
+          }
+        }
+
+        th {
+          &:nth-of-type(1) {
+            position: sticky;
+            left: 0;
+            z-index: 4;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          &:nth-of-type(n + 2) {
+            .d-flex {
+              justify-content: end !important;
+            }
+          }
+          &:has(.orange.right) {
+            color: rgb(248, 143, 46) !important;
+            font-weight: 600;
+          }
+          &:has(.green.right) {
+            color: rgba(66, 144, 99, 0.9) !important;
+            font-weight: 600;
+          }
+          &:nth-of-type(1) {
+            position: sticky;
+            left: 0;
+            z-index: 1;
+            a {
+              margin-left: 18px;
+              text-decoration: none !important;
+            }
+          }
+        }
+      }
+      tr.level2 {
+        td {
+          &:nth-of-type(1) {
+            .d-flex {
+              padding-left: 13px;
+            }
+          }
+        }
+      }
+      tr.level3 {
+        td {
+          &:nth-of-type(1) {
+            .d-flex {
+              padding-left: 25px;
+            }
+          }
+        }
+      }
+      tr.level4 {
+        td {
+          &:nth-of-type(1) {
+            .d-flex {
+              padding-left: 39px;
+            }
+          }
+        }
+      }
+      tr.level5 {
+        td {
+          &:nth-of-type(1) {
+            .d-flex {
+              padding-left: 55px;
+            }
+          }
+        }
+      }
+      tr.level6 {
+        td {
+          &:nth-of-type(1) {
+            .d-flex {
+              padding-left: 70px;
+            }
+          }
+        }
+      }
+      .d-flex.flex-row {
+        &:has(.orange.right) {
+          justify-content: end;
+        }
+        &:has(.green.right) {
+          justify-content: end;
+        }
+      }
+    }
+  }
+  .d-flex {
+    gap: 1px;
+  }
+}
+
+// .Monthly-Pr-Changes-By-Day table tbody tr td:nth-of-type(-n + 4) .d-flex {
+//   justify-content: flex-start !important;
+// }
+
+.MRF-summary-by-region-table-BUview.darkHeader:not(.toHead)
+  tbody
+  tr:nth-of-type(1)
+  td {
+  background-color: $tableSummaryGray !important;
+}

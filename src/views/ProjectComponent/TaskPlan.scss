@@ -1,0 +1,132 @@
+@import "../../scss/variables";
+
+.p-datatable.taskPlanTable {
+  overflow-x: scroll;
+  width: 100%;
+  max-height: var(--dynamic-value);
+  table{
+    border-collapse: separate;
+    thead{
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+}
+  table {
+    tr.p-datatable-row-expansion:not(:has(td:not([colspan="12"]))) {
+      display: none !important;
+    }
+
+    tbody.p-datatable-tbody {
+      & > tr {
+        & > td {
+          &:has(.taskPlanInnerTable) {
+            padding: 0 !important;
+          }
+          tr.p-datatable-row-expansion:not(:has(td:not([colspan="12"]))) {
+            display: none !important;
+          }
+
+          table {
+            thead {
+              display: none;
+            }
+            tbody {
+              tr {
+                td {
+                  &:first-of-type {
+                    border-left: 0;
+                  }
+                  &:last-of-type {
+                    border-right: 0;
+                  }
+                }
+
+                td {
+                  background-color: #f3efef !important;
+                }
+                &.p-row-odd {
+                  td {
+                    background-color: #fff !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        &:nth-of-type(1) {
+          width: 66px;
+          button {
+            padding: 0 !important;
+            width: auto;
+            height: auto;
+            background: none;
+            box-shadow: 0 0 0;
+          }
+        }
+        &:nth-of-type(2) {
+          width: 180px;
+        }
+        &:nth-of-type(3) {
+          width: 100px;
+        }
+        &:nth-of-type(4) {
+          width: 100px;
+        }
+        &:nth-of-type(5) {
+          width: 100px;
+        }
+        &:nth-of-type(6) {
+          width: 160px;
+        }
+        &:nth-of-type(7) {
+          width: 100px;
+        }
+        &:nth-of-type(8) {
+          width: 240px;
+        }
+        &:nth-of-type(9) {
+          width: 80px;
+        }
+        &:nth-of-type(10) {
+          width: 100px;
+        }
+        &:nth-of-type(11) {
+          width: 80px;
+        }
+        &:nth-of-type(12) {
+          width: 160px;
+        }
+      }
+    }
+  }
+}
+
+@mixin generate-button-margins($depth) {
+  td:first-of-type {
+    button {
+      margin-left: #{$depth}px;
+    }
+    @if $depth < 200 {
+      tbody {
+        tr {
+          @include generate-button-margins($depth + 10);
+        }
+      }
+    }
+  }
+}
+
+.taskPlanTable {
+  tbody {
+    tr {
+      @include generate-button-margins(0);
+    }
+  }
+}

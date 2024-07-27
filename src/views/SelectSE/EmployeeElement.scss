@@ -1,0 +1,14 @@
+.employee-element {
+  position: relative; /* Add relative positioning to the container */
+  transition: padding 0.2s; /* Add a transition for a smooth effect */
+
+  &:hover {
+    padding-right: 10px; /* Add right padding to create space equivalent to two letters */
+    background-color:rgb(204, 38, 38);
+    border-radius: 4px;
+  }
+}
+/* Add this CSS to your stylesheet */
+.button-pointer {
+  cursor: pointer;
+}

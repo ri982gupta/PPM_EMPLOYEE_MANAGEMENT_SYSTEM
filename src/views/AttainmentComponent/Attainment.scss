@@ -1,0 +1,25 @@
+@import "../../scss/variables";
+
+.infoIcon {
+  margin-left: 5px;
+  color: $accent;
+}
+.search {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+.dynText {
+  font-size: 13px;
+}
+// .react-datepicker__input-container::before {
+//   content: "FY";
+//   position: absolute;
+//   left: 8px;
+//   // top: 3px;
+// }
+// .react-datepicker__input-container::after {
+//   padding: 0 5px 0 27px !important;
+// }
+// .datepickerAttainment input#startDate {
+//   padding: 0px 26px !important;
+// }

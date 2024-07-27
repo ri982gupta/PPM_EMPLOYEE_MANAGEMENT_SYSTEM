@@ -1,0 +1,45 @@
+@import "../../scss/variables";
+
+.p-datatable .p-datatable-thead tr th {
+  padding: 4px;
+}
+.btn-container.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.attainprogresstable {
+  tr:nth-of-type(3) {
+    td {
+      background-color: #f5d5a7 !important;
+      &.noTableData {
+        background-color: $white !important;
+        --cui-table-accent-bg: rgba($white, 0) !important;
+      }
+    }
+  }
+
+  .attaintd.Q1,
+  .attaintd.Q3 {
+    background-color: #f0f7f7;
+    text-align: right;
+  }
+
+  .attaintd.Q2,
+  .attaintd.Q4 {
+    background-color: #fbf5f5;
+    text-align: right;
+  }
+
+  td.total.attaintd.service,
+  td.total.attaintd.software {
+    background-color: #ffffe6;
+  }
+  .attainth {
+    text-align: center;
+    vertical-align: middle;
+    background-color: #f5f5f5;
+    --cui-table-accent-bg: rgba($white, 0) !important;
+  }
+}

@@ -1,0 +1,252 @@
+.team-tracker-collapsible-table {
+  border-right: 1px solid #ddd;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 5px;
+  overflow: auto;
+  max-width: 100%;
+  table {
+    thead {
+      th {
+        line-height: 1.2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: center;
+        &:nth-of-type(1) {
+          .sup-busin-res {
+            svg {
+              font-size: 20px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    tbody {
+      td {
+        &:nth-of-type(1) {
+          text-align: left;
+        }
+        &:has(.sup-busin-res) {
+          text-align: left;
+        }
+        &.Trackerhighlight {
+          background-color: rgba(246, 167, 167, 0.73) !important;
+        }
+        &:has(.Trackerhighlight) {
+          background-color: rgba(246, 167, 167, 0.73) !important;
+        }
+
+        .span-wrapper {
+          span {
+            a {
+              cursor: pointer;
+            }
+          }
+        }
+
+        text-align: right;
+      }
+    }
+    td,
+    th {
+      &:nth-of-type(1),
+      &:has(.sup-busin-res) {
+        max-width: 180px;
+        min-width: 180px;
+      }
+      max-width: 100px;
+      min-width: 100px;
+      padding: 8px;
+      border-right: 1px solid #ddd;
+      .span-wrapper {
+        max-width: 170px;
+      }
+    }
+  }
+  //for over ride the background color which is getting from app.scss for odd row
+  :not(.toHead) tbody tr:nth-of-type(odd) td.Trackerhighlight {
+    background-color: rgba(246, 167, 167, 0.73) !important;
+  }
+  :not(.toHead) tbody tr:nth-of-type(odd) td:has(.Trackerhighlight) {
+    background-color: rgba(246, 167, 167, 0.73) !important;
+  }
+}
+
+.team-tracker-resource-search {
+  // overflow: auto;
+  max-height: calc(100vh - 145px);
+  table {
+    border-collapse: separate;
+    thead {
+      tr {
+        th {
+          position: sticky;
+          top: 0;
+          z-index: 2;
+        }
+      }
+    }
+    th,
+    td {
+      &:nth-of-type(1),
+      &:has(.sup-busin-res) {
+        max-width: 180px !important;
+        min-width: 180px !important;
+      }
+      max-width: 70px !important;
+      min-width: 70px !important;
+    }
+  }
+}
+
+.team-tracker-all-reportee {
+  table {
+    border-collapse: separate;
+    tr {
+      th,
+      td {
+        &:nth-of-type(1) {
+          position: sticky;
+          left: 0;
+          z-index: 2;
+        }
+      }
+      &:has(.supervisor-BUunit) {
+        th,
+        td {
+          &:nth-of-type(2) {
+            position: sticky;
+            left: 180px;
+            z-index: 2;
+          }
+          &:nth-of-type(3) {
+            position: sticky;
+            left: 360px;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+}
+.team-tracker-resource-search {
+  table {
+    border-collapse: separate;
+    thead {
+      tr {
+        th {
+          &:nth-of-type(1) {
+            position: sticky;
+            z-index: 3;
+            left: 0;
+          }
+        }
+        &:has(.supervisor-BUunit) {
+          th {
+            &:nth-of-type(2) {
+              position: sticky;
+              left: 180px;
+              z-index: 3;
+            }
+            &:nth-of-type(3) {
+              position: sticky;
+              left: 360px;
+              z-index: 3;
+            }
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          &:nth-of-type(1) {
+            position: sticky;
+            z-index: 1;
+            left: 0;
+          }
+          &:has(.span-wrapper.ellipsis.ScreenName) {
+            padding-left: 30px !important;
+          }
+        }
+        &:has(.supervisor-BUunit) {
+          td {
+            &:nth-of-type(2) {
+              position: sticky;
+              left: 180px;
+              z-index: 1;
+            }
+            &:nth-of-type(3) {
+              position: sticky;
+              left: 360px;
+              z-index: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.mt-2:has(.team-tracker-collapsible-table) {
+  padding: 0 !important;
+}
+
+.enable {
+  cursor: pointer;
+  color: #000;
+}
+.paginationView {
+  font-size: 15px;
+  display: inline;
+}
+
+.pagination-date-btn-wrapper {
+  margin-top: -8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .tracker-pagination {
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #6c757d !important;
+    font-size: 0.9rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    .span-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+  .date-btn {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+  }
+  .abbreviation-btn {
+    width: 33.33%;
+    display: flex;
+    justify-content: end;
+  }
+}
+
+.hidden-column {
+  display: none;
+}
+
+//left padding for expanded cell
+
+.team-tracker-collapsible-table.darkHeader:not(.toHead)
+  tbody
+  tr
+  td.expanded-row-cell {
+  padding-left: 30px !important;
+}
+
+.tracker-screen-filter {
+  white-space: nowrap;
+  overflow: hidden;
+}

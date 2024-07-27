@@ -1,0 +1,34 @@
+@import "../../scss/variables";
+
+.pyramidTable {
+  thead {
+    th {
+      div {
+        span {
+          div {
+            max-width: 160px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+  td:first-of-type {
+    div {
+      text-align: center;
+    }
+  }
+  tbody {
+    td {
+      &:has(.piIdeal),
+      &:has(.piCount) {
+        border-right: 1px solid #566f84;
+      }
+      &:last-of-type {
+        border-right: 0;
+      }
+    }
+  }
+}
